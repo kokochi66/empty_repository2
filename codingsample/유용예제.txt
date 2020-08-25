@@ -1,0 +1,5 @@
+arr_integer insertEM(arr_integer a, int *b){
+	int len = a.size,i;
+	for(i=0;i<len;i++) a.arr[i] = b[i];
+	return a;
+}
