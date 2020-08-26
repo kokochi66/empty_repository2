@@ -3,3 +3,12 @@ arr_integer insertEM(arr_integer a, int *b){
 	for(i=0;i<len;i++) a.arr[i] = b[i];
 	return a;
 }
+
+arr_string insertstring(arr_string a, char b[][4]){
+	int i;
+	for(i=0;i<a.size;i++) {
+		a.arr[i] = (char) malloc(sizeof(char)*strlen(b[i]));
+		a.arr[i] = b[i];
+	}
+	return a;
+}
