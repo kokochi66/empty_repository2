@@ -16,7 +16,7 @@ arr_integer alloc_arr_integer(int len) {
 arr_integer insertEM(arr_integer a, int *b){
 	int len = a.size,i;
 	for(i=0;i<len;i++) a.arr[i] = b[i];
-	return a;
+	return a; 
 }
 
 int countcloset(arr_integer a,int swit) {
@@ -44,6 +44,7 @@ int absoluteValuesSumMinimization(arr_integer a) {
 
 
 int main() {
+  printf("Hello world!, ¾È³çÇÏ¼¼¿ä!\n");
 }
 
 
