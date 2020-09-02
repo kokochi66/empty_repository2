@@ -3,14 +3,14 @@ package javaSpeedCoding20200901;
 import java.util.Arrays;
 
 public class differentSquares {
-	static boolean CompSquares(int[][] m, int x1,int y1,int x2,int y2) {	//두 2x2가 서로 같은지를 출력하는 함수(비교)
+	static boolean CompSquares(int[][] m, int x1,int y1,int x2,int y2) {	//?? 2x2?? ???? ???????? ?????? ???(??)
 		return !(m[x1][y1]!=m[x2][y2]||m[x1+1][y1]!=m[x2+1][y2]||m[x1][y1+1]!=m[x2][y2+1]||m[x1+1][y1+1]!=m[x2+1][y2+1]);
 	}
 	
-	static int SumSquares(int[][] m, int x,int y) {	//2x2의 합을 출력하는 함수
+	static int SumSquares(int[][] m, int x,int y) {	//2x2?? ???? ?????? ???
 		return m[x][y]+m[x+1][y]+m[x][y+1]+m[x+1][y+1];
 	}
-	static int differentSquares(int[][] m) {	//2차원 배열에서 각 2x2의 종류가 다른것의 개수를 출력하는 함수
+	static int differentSquares(int[][] m) {	//2???? ?占쏙옙???? ?? 2x2?? ?????? ??????? ?????? ?????? ???
 		boolean[][] check = new boolean[m.length][m[0].length];
 		for(int i=0;i<check.length;i++) Arrays.fill(check[i], Boolean.FALSE);
 		int count = 0;
