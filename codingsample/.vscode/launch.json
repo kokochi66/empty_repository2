@@ -1,0 +1,63 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - addTwoDigits",
+            "request": "launch",
+            "mainClass": "addTwoDigits",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Intro3_Smooth_Sailing",
+            "request": "launch",
+            "mainClass": "Intro3_Smooth_Sailing",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Intro1_Journey_Begins<codingsample_f67ef324>",
+            "request": "launch",
+            "mainClass": "Intro1_Journey_Begins",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Intro2_Edge_of_the_Ocean<codingsample_f67ef324>",
+            "request": "launch",
+            "mainClass": "Intro2_Edge_of_the_Ocean",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-messageFromBinaryCode<codingsample_f67ef324>",
+            "request": "launch",
+            "mainClass": "messageFromBinaryCode",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-spiralNumbers<codingsample_f67ef324>",
+            "request": "launch",
+            "mainClass": "spiralNumbers",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-sudoku<codingsample_f67ef324>",
+            "request": "launch",
+            "mainClass": "sudoku",
+            "projectName": "codingsample_f67ef324"
+        }
+    ]
+}
