@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TheCore3_Corner_of_0s_and_1s",
+            "request": "launch",
+            "mainClass": "TheCore3_Corner_of_0s_and_1s",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TheCore2_At_the_Crossroads",
+            "request": "launch",
+            "mainClass": "TheCore2_At_the_Crossroads",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - addTwoDigits",
             "request": "launch",
             "mainClass": "addTwoDigits",
