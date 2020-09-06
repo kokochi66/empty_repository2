@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TheCore4_Loop_Tunnel",
+            "request": "launch",
+            "mainClass": "TheCore4_Loop_Tunnel",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TheCore3_Corner_of_0s_and_1s",
             "request": "launch",
             "mainClass": "TheCore3_Corner_of_0s_and_1s",
