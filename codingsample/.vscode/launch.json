@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Intro4_Exploring_the_Waters",
+            "request": "launch",
+            "mainClass": "Intro4_Exploring_the_Waters",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TheCore5_List_Forest_Edge",
+            "request": "launch",
+            "mainClass": "TheCore5_List_Forest_Edge",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TheCore4_Loop_Tunnel",
             "request": "launch",
             "mainClass": "TheCore4_Loop_Tunnel",
