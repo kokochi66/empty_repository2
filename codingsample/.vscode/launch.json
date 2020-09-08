@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TheCore6_Labyrinth_of_Nested_Loops",
+            "request": "launch",
+            "mainClass": "TheCore6_Labyrinth_of_Nested_Loops",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KNU_Practice_week2",
+            "request": "launch",
+            "mainClass": "KNU_Practice_week2",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Intro4_Exploring_the_Waters",
             "request": "launch",
             "mainClass": "Intro4_Exploring_the_Waters",
