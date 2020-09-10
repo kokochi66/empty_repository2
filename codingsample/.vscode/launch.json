@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - codeChallenge_0910_4",
+            "request": "launch",
+            "mainClass": "codeChallenge_0910_4",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - codeChallenge_0910_3",
+            "request": "launch",
+            "mainClass": "codeChallenge_0910_3",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - codeChallenge_0910_2",
+            "request": "launch",
+            "mainClass": "codeChallenge_0910_2",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - codeChallenge_0910_1",
+            "request": "launch",
+            "mainClass": "codeChallenge_0910_1",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - codeChallenge_0910",
+            "request": "launch",
+            "mainClass": "codeChallenge_0910",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TheCore6_Labyrinth_of_Nested_Loops2",
+            "request": "launch",
+            "mainClass": "TheCore6_Labyrinth_of_Nested_Loops2",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - KNUweek2_3",
             "request": "launch",
             "mainClass": "KNUweek2_3",
