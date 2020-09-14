@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TheCore7_BookMarket",
+            "request": "launch",
+            "mainClass": "TheCore7_BookMarket",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BookMarket",
+            "request": "launch",
+            "mainClass": "BookMarket",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TheCore6_Labyrinth_of_Nested_Loops4",
+            "request": "launch",
+            "mainClass": "TheCore6_Labyrinth_of_Nested_Loops4",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",

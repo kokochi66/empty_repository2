@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
-public class Main {
+public class bkjcoing_L6 {
     private static void P1() throws Exception {
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
         int a = Integer.parseInt(bfr.readLine());
