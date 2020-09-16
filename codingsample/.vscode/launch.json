@@ -6,6 +6,83 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Vector_VectorTest",
+            "request": "launch",
+            "mainClass": "Vector_VectorTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Map_TreeMapTest",
+            "request": "launch",
+            "mainClass": "Map_TreeMapTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BigIntegerTest",
+            "request": "launch",
+            "mainClass": "BigIntegerTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HashSetTest",
+            "request": "launch",
+            "mainClass": "HashSetTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Dictionary_HashTableTest",
+            "request": "launch",
+            "mainClass": "Dictionary_HashTableTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Dictionary_HashMapTest",
+            "request": "launch",
+            "mainClass": "Dictionary_HashMapTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DictionaryTest",
+            "request": "launch",
+            "mainClass": "DictionaryTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StackTest",
+            "request": "launch",
+            "mainClass": "StackTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TreeMapTest",
+            "request": "launch",
+            "mainClass": "TreeMapTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PriorityQueueTest",
+            "request": "launch",
+            "mainClass": "PriorityQueueTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QueueTest",
+            "request": "launch",
+            "mainClass": "QueueTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TheCore7_BookMarket",
             "request": "launch",
             "mainClass": "TheCore7_BookMarket",

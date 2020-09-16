@@ -73,7 +73,7 @@ public class TheCore7_BookMarket {
         System.out.println(leftOne + " " + lefttwo);
         return leftOne != lefttwo;
     }
-    
+    // 버러지같은 문제
 
     
     public static void main(String[] args){
