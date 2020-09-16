@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - bkjcoing_L7",
+            "request": "launch",
+            "mainClass": "bkjcoing_L7",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KNU_week3_3",
+            "request": "launch",
+            "mainClass": "KNU_week3_3",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KNU_week3_2",
+            "request": "launch",
+            "mainClass": "KNU_week3_2",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BigInteger_BigIntegerTest",
+            "request": "launch",
+            "mainClass": "BigInteger_BigIntegerTest",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KNU_week3_1",
+            "request": "launch",
+            "mainClass": "KNU_week3_1",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Vector_VectorTest",
             "request": "launch",
             "mainClass": "Vector_VectorTest",
