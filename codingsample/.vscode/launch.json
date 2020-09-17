@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - bkjcoing_L8",
+            "request": "launch",
+            "mainClass": "bkjcoing_L8",
+            "projectName": "codingsample_f67ef324"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - bkjcoing_L7",
             "request": "launch",
             "mainClass": "bkjcoing_L7",
