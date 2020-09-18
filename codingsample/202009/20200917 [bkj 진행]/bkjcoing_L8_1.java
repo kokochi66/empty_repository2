@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.stream.IntStream;
 
-public class Main {
+public class bkjcoing_L8_1 {
     private static void P1() throws Exception {
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
