@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Arrays;
 
-public class Main {
+public class bkjcoing_L8_2 {
     public static void P9() throws Exception {
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));

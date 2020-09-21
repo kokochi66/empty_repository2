@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
 public class TheCore8_MirrorLake {
     private static int stringsConstruction(String a, String b) {
         int[] numB = new int[26];
@@ -186,7 +190,7 @@ public class TheCore8_MirrorLake {
     }
     
     public static void main(String[] args){
-        
+        System.out.println("A");
         
     }
     
