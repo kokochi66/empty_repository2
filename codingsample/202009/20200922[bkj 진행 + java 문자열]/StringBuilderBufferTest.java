@@ -19,5 +19,11 @@ public class StringBuilderBufferTest {
 
         System.out.println("reverse : " + buil.reverse());
         // 5) reverse를 이용해서 문자열 뒤집기 가능
+
+        System.out.println(buil.replace(0, 1, "a"));
+
+        StringBuilder a = new StringBuilder("abcdef");
+        System.out.println(a.delete(0, 1));
+
     }
 }
