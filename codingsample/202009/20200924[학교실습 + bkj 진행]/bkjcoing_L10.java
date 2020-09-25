@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class bkjcoing_L10 {
 
     public static void P1() throws Exception {
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
