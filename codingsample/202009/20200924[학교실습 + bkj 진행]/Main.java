@@ -213,34 +213,38 @@ public class Main {
         int r = Integer.parseInt(input);
         System.out.printf("%.6f\n",Math.PI*r*r);
         System.out.printf("%.6f\n",(double)(2*r*r));
-        // bfw.write(output1);
-        // bfw.newLine();
-        // bfw.write(output2);
-        // bfw.flush();
-        // bfw.close();
-        // bfr.close();
     }
     public static void P10() throws Exception { 
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
         String input = bfr.readLine();
+        String output = "";
         int TestCount = Integer.parseInt(input);
         for(int TestCase=0;TestCase<TestCount;TestCase++){
             input = bfr.readLine();
+            output = "";
             StringTokenizer inputToken = new StringTokenizer(input);
             int x1 = Integer.parseInt(inputToken.nextToken()), y1= Integer.parseInt(inputToken.nextToken()), r1=Integer.parseInt(inputToken.nextToken());
             int x2 = Integer.parseInt(inputToken.nextToken()), y2= Integer.parseInt(inputToken.nextToken()), r2= Integer.parseInt(inputToken.nextToken());
             if(x1==x2 && y1==y2){
-                if(r1==r2) bfw.write(-1+"");
-                else bfw.write(0+"");
+                if(r1!=r2) output = 0+"";
+                else if(r1>0) output = -1+"";
+                else if(r1==0) output = 1+"";
             }
             else {
-                int temp = (int)Math.pow(x2-x1,2)+(int)Math.pow(y2-y1,2);
-                if(temp>(int)Math.pow(r1+r2,2)) bfw.write(0+"");
-                else if(temp==(int)Math.pow(r1+r2,2)) bfw.write(1+"");
-                else if(temp<(int)Math.pow(r1+r2,2)) bfw.write(2+"");
-
+                double distance = Math.sqrt(Math.pow(Math.abs(x2-x1),2) + Math.pow(Math.abs(y2-y1),2));
+                double var = (double)(r1+r2);
+                if(var<distance) output = 0+"";
+                else if(var==distance) output = 1+"";
+                else {
+                    var = (double)Math.max(r1, r2) - distance;
+                    distance = (double)Math.min(r1,r2);
+                    if(var>distance) output = 0+"";
+                    else if(var==distance ) output = 1+"";
+                    else output = 2+"";
+                }
             }
+            bfw.write(output);
             bfw.newLine();
         }
         bfw.flush();
