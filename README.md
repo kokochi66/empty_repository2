@@ -4,16 +4,13 @@
 
 공부하고싶은 언어들
 
-1. C
-2. Java
+1. Java
+
+2. SQL
+
 3. Python
-4. C#
-5. C++
-6. JS
-7. kotlin
-8. dart
-9. swift
-10. php
+
+4. C
 
 일단 기본은 C, Java, Python을 기본적으로 진행할 것이며
 
