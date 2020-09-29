@@ -16,6 +16,12 @@ public class pro_Level1_5{
             if(i<lost.length) lostP.add(lost[i]);
             if(i<reserve.length) reserveP.add(reserve[i]);
         }
+        for(int i=1;i<=n;i++){
+            if(lostP.contains(i) && reserveP.contains(i)) {
+                lostP.remove(lostP.indexOf(i));
+                reserveP.remove(reserveP.indexOf(i));
+            }
+        }
         int count = 0;
         for(int i=1;i<=n;i++){
             if(lostP.contains(i)){
