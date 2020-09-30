@@ -7,10 +7,9 @@ public class pro_Level1_6 {
         for(int i=0;i<commands.length;i++){
             int[] temp = IntStream.range(commands[i][0]-1, commands[i][1]).map(q->array[q]).toArray();
             Arrays.sort(temp);
-            System.out.println("정렬된 부분배열 = " + Arrays.toString(temp));
             output[i] = temp[commands[i][2]-1];
-            System.out.println(i + " " + output[i]);
-            System.out.println("기본 array = " + Arrays.toString(array));
+            // System.out.println("정렬된 부분배열 = " + Arrays.toString(temp));
+            // System.out.println("기본 array = " + Arrays.toString(array));
         }
         return output;
     }
