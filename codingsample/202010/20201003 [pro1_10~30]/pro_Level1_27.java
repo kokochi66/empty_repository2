@@ -1,3 +1,6 @@
+import java.util.*;
+import java.util.stream.*;
+
 public class pro_Level1_27 {
     public static int[] solution(int[] a) {
         int b = IntStream.range(0, a.length).map(i->a[i]).min().getAsInt();

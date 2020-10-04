@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class pro_Level1_30 {
     public int[] solution(int a, int b) {
         ArrayList<Integer> bumA = new ArrayList<Integer>();

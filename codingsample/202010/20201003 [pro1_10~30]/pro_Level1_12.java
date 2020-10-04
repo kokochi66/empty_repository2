@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class pro_Level1_12 {
     public static String[] solution(String[] strings, int n) {
         Arrays.sort(strings);
