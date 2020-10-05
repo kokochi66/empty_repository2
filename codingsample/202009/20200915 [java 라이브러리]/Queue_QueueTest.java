@@ -14,7 +14,6 @@ public class Queue_QueueTest {
         myque.offer(t2);
         myque.offer(t3);
         myque.offer(t4);
-
         while(myque.peek() != null) {
             String val = myque.poll()+"";
             System.out.println("값은 " + val);
