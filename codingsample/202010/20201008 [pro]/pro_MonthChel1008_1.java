@@ -12,7 +12,7 @@ public class pro_MonthChel1008_1 {
             temp = temp.substring(0, temp.length()-1);
             // System.out.println("sum = " + sum +" "+temp);
         }
-        System.out.println(sum);
+        // System.out.println(sum);
         return 0;
     }
     public static void main(String[] args){
