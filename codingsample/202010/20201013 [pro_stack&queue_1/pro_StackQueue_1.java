@@ -25,7 +25,7 @@ public class pro_StackQueue_1 {
                 // 먼저 스택 안에 값이 비어있는지 확인해야함 (오류 방지)
                 // 그 뒤에, 스택의 최대 prices값이 현재 prices값보다 큰지 확인.
                 // 혹은 순환이 최대치에 도달한 경우(배열은 끝났는데, 스택이 남아있을 수 있음.)
-                while((!save.isEmpty() && save.peek()[0] > prices[i]) || (!save.isEmpty() && i == prices.length-1)) {
+                while(!save.isEmpty() && ((save.peek()[0] > prices[i]) || (i == prices.length-1))) {
                     // 크다면 스택의 내부 값을 계속 순환하며 현재 price보다 큰 값을 전부 꺼냄.
                     // 순환 최대치인 경우에는, 그냥 남은 스택을 전부 반환함.
                     int peek1 = save.peek()[1];
