@@ -6,7 +6,7 @@ public class pro_Hash_1 {
     // https://programmers.co.kr/learn/courses/30/lessons/42576
 
     public static String solution(String[] participant, String[] completion) {
-        // 배열의 길이는 최대 100,000이기 때문에, 제곱연산 시, 100억 연산으로 불가능함 [1억 연산 미만으로 풀어내는것이 목표]
+        // 배열의 길이는 최대 100,000이기 때문에, 제곱연산 시, 100억 연산으로 불가능함 [천만 연산 미만으로 풀어내는것이 목표]
         // 하지만 배열이 기본적으로 섞여있기 때문에, 모든 배열을 확인할 필요가 있음 -> 2n 이상의 연산이 필요함.
         HashMap<String, Integer> compSet = new HashMap<String, Integer>();
         
