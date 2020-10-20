@@ -1,3 +1,4 @@
+import java.util.*;
 public class pro_StackQueue_3 {
     // https://programmers.co.kr/learn/courses/30/lessons/42583
 
