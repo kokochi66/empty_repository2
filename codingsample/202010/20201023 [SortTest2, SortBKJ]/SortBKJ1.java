@@ -9,64 +9,7 @@ public class SortBKJ1 {
     // 5. https://www.acmicpc.net/problem/10989 수 정렬하기 3
     // 6. https://www.acmicpc.net/problem/1931 회의실 배정
 
-    public static void Solution() throws Exception {
-        BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
-        String input = Read.readLine();
-        int n = Integer.parseInt(input);
-        int[][] arr = new int[n][2];
-        for(int i=0;i<n;i++){
-            input = Read.readLine();
-            String[] inToken = input.split(" ");
-            arr[i][0] = Integer.parseInt(inToken[0]);
-            arr[i][1] = Integer.parseInt(inToken[1]);
-        }
-        // 2차원 배열 내에 시작시간과 끝나는시간을 넣음.
-        // 총 개수가 10만이므로, N*Log N 연산인 힙정렬을 통해서 시작시간값을 먼저 정렬함.
-        // 여기서 시작시간이 같다면, 끝나는시간이 더 낮은 값이 먼저오도록 함.
-        int[] temp = new int[2];
-        for(int i=1;i<arr.length;i++){
-            int c = i;
-            do {
-                int root = (c-1)/2;
-                if(arr[c][0] > arr[root][0] || (arr[c][0]==arr[root][0] && arr[c][1]>arr[root][1])) {
-                    temp = arr[c];
-                    arr[c] = arr[root];
-                    arr[root] = temp;
-                }
-                c = root;
-            } while(c!=0);
-        }
-        int count = 0;
-        int CurrRight = arr[0][1]+1;
-        for(int i=arr.length-1;i>=0;i--){
-            if(arr[0][1] <= CurrRight) {
-                count++;
-                CurrRight = arr[0][0];
-            }
-            arr[0] = arr[i];
-            int c = 0, next;
-            do {
-                next = (c*2)+1;
-                if(next+1<i && (arr[next][0] < arr[next+1][0] || (arr[next][0]==arr[next+1][0] && arr[next][1] < arr[next+1][1]))) next++;
-                if(next<i && (arr[c][0] < arr[next][0] || (arr[c][0] == arr[next][0] && arr[c][1] < arr[next][1]))){
-                    temp = arr[c];
-                    arr[c] = arr[next];
-                    arr[next] = temp;
-                }
-                c = next;
-            } while(c<i);
-        }
-        // 시작시간과 끝나는시간을 모두 고려한 힙정렬 완료
-
-        // for(int i=0;i<arr.length;i++) System.out.println(Arrays.toString(arr[i]));
-        Write.write(count+"");
-        Write.flush();
-        Write.close();
-        Read.close();
-    }
     public static void main(String[] args) throws Exception {
-        Solution();
     }
     public static void SortBKJ1_1() throws Exception {
 
@@ -240,5 +183,60 @@ public class SortBKJ1 {
         Write.close();
         Read.close();
     }
+    public static void SortBKJ1_6() throws Exception {
+        BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
+        String input = Read.readLine();
+        int n = Integer.parseInt(input);
+        int[][] arr = new int[n][2];
+        for(int i=0;i<n;i++){
+            input = Read.readLine();
+            String[] inToken = input.split(" ");
+            arr[i][0] = Integer.parseInt(inToken[0]);
+            arr[i][1] = Integer.parseInt(inToken[1]);
+        }
+        // 2차원 배열 내에 시작시간과 끝나는시간을 넣음.
+        // 총 개수가 10만이므로, N*Log N 연산인 힙정렬을 통해서 시작시간값을 먼저 정렬함.
+        // 여기서 시작시간이 같다면, 끝나는시간이 더 낮은 값이 먼저오도록 함.
+        int[] temp = new int[2];
+        for(int i=1;i<arr.length;i++){
+            int c = i;
+            do {
+                int root = (c-1)/2;
+                if(arr[c][0] > arr[root][0] || (arr[c][0]==arr[root][0] && arr[c][1]>arr[root][1])) {
+                    temp = arr[c];
+                    arr[c] = arr[root];
+                    arr[root] = temp;
+                }
+                c = root;
+            } while(c!=0);
+        }
+        int count = 0;
+        int CurrRight = arr[0][1]+1;
+        for(int i=arr.length-1;i>=0;i--){
+            if(arr[0][1] <= CurrRight) {
+                count++;
+                CurrRight = arr[0][0];
+            }
+            arr[0] = arr[i];
+            int c = 0, next;
+            do {
+                next = (c*2)+1;
+                if(next+1<i && (arr[next][0] < arr[next+1][0] || (arr[next][0]==arr[next+1][0] && arr[next][1] < arr[next+1][1]))) next++;
+                if(next<i && (arr[c][0] < arr[next][0] || (arr[c][0] == arr[next][0] && arr[c][1] < arr[next][1]))){
+                    temp = arr[c];
+                    arr[c] = arr[next];
+                    arr[next] = temp;
+                }
+                c = next;
+            } while(c<i);
+        }
+        // 시작시간과 끝나는시간을 모두 고려한 힙정렬 완료
 
+        // for(int i=0;i<arr.length;i++) System.out.println(Arrays.toString(arr[i]));
+        Write.write(count+"");
+        Write.flush();
+        Write.close();
+        Read.close();
+    }
 }
