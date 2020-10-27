@@ -1,14 +1,16 @@
 import java.io.*;
 import java.util.*;
 
-public class Maina {
+public class StackBKJ2 {
     // 1. https://www.acmicpc.net/problem/10799 쇠막대기
     // 2. https://www.acmicpc.net/problem/10773 제로
     // 3. https://www.acmicpc.net/problem/1406 에디터
     // 4. https://www.acmicpc.net/problem/4949 균형잡힌 세상
+    // 5. https://www.acmicpc.net/problem/2504 괄호의 값
 
     public static void main(String[] args) throws Exception {
         // Solution();
+
     }
     
 
@@ -142,4 +144,69 @@ public class Maina {
         if(Big.isEmpty() && Small.isEmpty()) return true;
         else return false;
     }
+    public static void SortBKJ2_5() throws Exception {
+        BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
+        String input = Read.readLine();
+        if(input.isEmpty()) System.out.println(0);
+        else {
+            int output = SortBKJ2_5_func(input);
+        if(output == -1) System.out.println(0);
+        else System.out.println(output);
+        }
+        
+    }
+    public static int SortBKJ2_5_func(String s){
+        if(s.length() == 0 ) return 1;
+        Stack<Integer> Small = new Stack<Integer>();
+        Stack<Integer> Big = new Stack<Integer>();
+
+        StringBuilder str = new StringBuilder(s);
+        int sum = 0;
+        for(int i=0;i<str.length();i++){
+            char Curr = str.charAt(i);
+            // System.out.println(str +"   "+Curr+"   "+i);
+            if(Curr == '(') {
+                Small.push(i);
+                int index = i+1;
+                while(!Small.isEmpty()){
+                    if(index >= str.length()) return -1;
+                    Curr = str.charAt(index);
+                    if(Curr == '(') Small.push(index);
+                    else if(Curr == ')') {
+                        if(Small.size() == 1) {
+                            int thisVar = SortBKJ2_5_func(str.substring(Small.peek()+1, index));
+                            if(thisVar == -1) return -1;
+                            sum += 2*thisVar;
+                            str.delete(Small.peek(), index+1);
+                            i -= (i-Small.pop())+1;
+                        } else Small.pop();
+                    }
+                    index++;
+                }
+            }
+            else if(Curr == '['){
+                Big.push(i);
+                int index = i+1;
+                while(!Big.isEmpty()){
+                    if(index >= str.length()) return -1;
+                    Curr = str.charAt(index);
+                    if(Curr == '[') Big.push(index);
+                    else if(Curr == ']') {
+                        if(Big.size() == 1) {
+                            int thisVar = SortBKJ2_5_func(str.substring(Big.peek()+1, index));
+                            if(thisVar == -1) return -1;
+                            sum += 3*thisVar;
+                            str.delete(Big.peek(), index+1);
+                            i -= (i-Big.pop())+1;
+                        } else Big.pop();
+                    }
+                    index++;
+                }
+
+            }
+        }
+        if(Small.isEmpty() && Big.isEmpty() && str.toString().isEmpty()) return sum;
+        else return -1;
+    }
+
 }
