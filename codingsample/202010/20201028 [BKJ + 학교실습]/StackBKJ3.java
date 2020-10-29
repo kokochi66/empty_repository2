@@ -5,54 +5,8 @@ import java.util.*;
 public class StackBKJ3 {
     // 1. https://www.acmicpc.net/problem/2493 탑
     public static void main(String[] args) throws Exception{
-        Solution();
+        // Solution();
     }
-    
-    public static void Solution() throws Exception{
-        BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        String input = Read.readLine();
-        while(!input.equals("0")){
-            String[] tok = input.split(" ");
-            int[] arr = new int[tok.length];
-            for(int i=0;i<tok.length;i++) arr[i] = Integer.parseInt(tok[i]);
-            long output = StackBKJ3_2_func(arr,0,0);
-            Write.write(output+"");
-            Write.newLine();
-            input = Read.readLine();
-        }
-        
-        Write.flush();
-        Write.close();
-        Read.close();
-    }
-    public static long StackBKJ3_2_func(int[] arr, int min, int swit){
-        Stack<Integer[]> MinStack = new Stack<Integer[]>();
-        int length = 1;
-        long maxSum = 0;
-        for(int i=swit;i<arr.length;i++){
-            if(MinStack.isEmpty()) MinStack.push(new Integer[]{arr[i],i});
-            else if(MinStack.peek()[0] <= arr[i]) {
-                MinStack.push(new Integer[]{arr[i],i});
-            } else if(MinStack.peek()[0] > arr[i]) {
-                while(!MinStack.isEmpty() && MinStack.peek()[0] > arr[i]){
-                    Integer[] data = MinStack.pop();
-                    if(maxSum < data[0]*(i-data[1])) maxSum = (long)data[0]*(long)(i-data[1]);
-                }
-                MinStack.push(new Integer[]{arr[i],i});
-                length = 1;
-            }
-            length++;
-        }
-        while(!MinStack.isEmpty()){
-            Integer[] data = MinStack.pop();
-            if(maxSum < data[0]*(arr.length-data[1])) maxSum = (long)data[0]*(long)(arr.length-data[1]);
-        }
-
-        return maxSum;
-    }
-
     public static void StackBKJ3_1() throws Exception{
         BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
