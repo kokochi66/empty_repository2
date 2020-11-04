@@ -11,10 +11,10 @@ public class BKJ1103 {
     public static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
     public static void main(String[] args) throws Exception{
-        Solution();
+        // Solution();
         
     }
-    public static void Solution() throws Exception{
+    public static void BKJ1103_SORT() throws Exception{
         PriorityQueue<String> PQ = new PriorityQueue<String>();
         StringBuilder input = new StringBuilder(Read.readLine());
         int n = input.length();
