@@ -39,7 +39,6 @@ public class BKJ1104_t {
         Write.close();
         Read.close();
     }
-
     public static void BKJ1104_BTK6_BTK(int S, int ci) {
         if(result == S && ci<n && ci!=0){
             // System.out.println(result +" "+ci+"  "+oper[ci]+"   "+Count);
@@ -54,7 +53,7 @@ public class BKJ1104_t {
         }
         if(ci<n && ci>0) {
             result += oper[ci];
-            BKJ1104_BTK5_FUNC(S,ci+1);
+            BKJ1104_BTK6_BTK(S,ci+1);
             result -= oper[ci];
         }
     }
