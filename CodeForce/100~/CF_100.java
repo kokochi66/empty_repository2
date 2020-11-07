@@ -1,7 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-public class CF_1 {
+// 코드 포스 100번 https://codeforces.com/problemsets/acmsguru/problem/99999/100
+
+public class CF_100 {
 
     static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
