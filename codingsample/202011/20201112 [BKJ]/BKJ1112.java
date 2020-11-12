@@ -17,6 +17,87 @@ public class BKJ1112 {
     public static void main(String[] args) throws Exception {
         Solution();
     }
+    public static void BKJ1112_14() throws Exception {
+        n = Integer.parseInt(Read.readLine());
+        int x = 64;
+        int res = 64;
+        int count = 1;
+        while(res != n){
+            if(n < res) {
+                while(x>n) x/=2;
+                res = x;
+                count = 1;
+            } else if(n>res){
+                while(x+res > n) x/=2;
+                count++;
+                res += x;
+            }
+        }
+        System.out.println(count);
+    }
+    public static void BKJ1112_13() throws Exception {
+        tok = new StringTokenizer(Read.readLine());
+        n = Integer.parseInt(tok.nextToken());
+        m = Integer.parseInt(tok.nextToken());
+        System.out.println((m*2)-n);
+    }
+    public static void BKJ1112_12() throws Exception {
+        tok = new StringTokenizer(Read.readLine());
+        long[] arr = new long[5];
+        long sum = 0;
+        for(int i=0;i<5;i++) {
+            arr[i] = Long.parseLong(tok.nextToken());
+            arr[i] *= arr[i];
+            sum += arr[i];
+        }
+        System.out.println(sum%10);
+    }
+    public static void BKJ1112_11() throws Exception {
+        tok = new StringTokenizer(Read.readLine());
+        n = Integer.parseInt(tok.nextToken());
+        m = Integer.parseInt(tok.nextToken());
+        arr = new int[n+5];
+        arr[0] = 1;
+        arr[1] = 1;
+        for(int i=2;i<=n;i++){
+            arr[i] = arr[i-1]*i;
+        }
+        System.out.println(arr[n]/(arr[n-m]*arr[m]));
+    }
+    public static void BKJ1112_9_10() throws Exception {
+        tok = new StringTokenizer(Read.readLine());
+        n = Integer.parseInt(tok.nextToken());
+        m = Integer.parseInt(tok.nextToken());
+        arr = new int[m];
+        BKJ1112_10_btk(0,1);
+        Write.flush();
+    }
+    public static void BKJ1112_10_btk(int k, int ci) throws Exception {
+        if(k==m){
+            for(int i=0;i<m;i++){
+                Write.write(arr[i]+" ");
+            }
+            Write.newLine();
+        } else {
+            for(int i=ci;i<=n;i++){
+                arr[k] = i;
+                BKJ1112_10_btk(k+1, i);
+            }
+        }
+    }
+    public static void BKJ1112_9_btk(int k) throws Exception {
+        if(k==m){
+            for(int i=0;i<m;i++){
+                Write.write(arr[i]+" ");
+            }
+            Write.newLine();
+        } else {
+            for(int i=1;i<=n;i++){
+                arr[k] = i;
+                BKJ1112_9_btk(k+1);
+            }
+        }
+    }
     public static void BKJ1112_8() throws Exception {
         int m = Integer.parseInt(Read.readLine());
         arr = new int[m];
