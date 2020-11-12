@@ -17,7 +17,57 @@ public class BKJ1112 {
     public static void main(String[] args) throws Exception {
         Solution();
     }
+    public static void BKJ1112_8() throws Exception {
+        int m = Integer.parseInt(Read.readLine());
+        arr = new int[m];
+        tok = new StringTokenizer(Read.readLine());
+        for(int i=0;i<m;i++){
+            arr[i] = Integer.parseInt(tok.nextToken());
+        }
+        tok = new StringTokenizer(Read.readLine());
+        int b = Integer.parseInt(tok.nextToken());
+        int c = Integer.parseInt(tok.nextToken());
+        long count = 0;
+        for(int i=0;i<m;i++){
+            count++;
+            arr[i] -= b;
+            if(arr[i]<0) arr[i] = 0;
+            count += (long)(arr[i]/c);
+            if(arr[i]%c!=0 && arr[i]!=0) count++;
+        }
+        Write.write(count+"");
+        Write.flush();
+    }
+    public static void BKJ1112_7() throws Exception {
+        int res = 0, max = 0;
+        for(int i=0;i<4;i++){
+            tok = new StringTokenizer(Read.readLine());
+            res -= Integer.parseInt(tok.nextToken());
+            res += Integer.parseInt(tok.nextToken());
+            if(max < res) max = res;
+        }
+        System.out.println(max);
+    }
+    public static void BKJ1112_6() throws Exception {
+        tok = new StringTokenizer(Read.readLine());
+        n = Integer.parseInt(tok.nextToken());
+        m = Integer.parseInt(tok.nextToken());
+        int k = Integer.parseInt(tok.nextToken());
+        int a1=1,a2=1,a3=1;
+        count = 1;
+        while(!(a1==n && a2 == m && a3 == k)){
+            a1++;
+            if(a1==16) a1 = 1;
+            a2++;
+            if(a2==29) a2 = 1;
+            a3++;
+            if(a3==20) a3 =1;
+            count++;
+        }
+        Write.write(count+"");
+        Write.flush();
 
+    }
     public static void BKJ1112_5() throws Exception {
         tok = new StringTokenizer(Read.readLine());
         h = Integer.parseInt(tok.nextToken());

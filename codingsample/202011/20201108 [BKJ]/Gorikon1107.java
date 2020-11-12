@@ -13,7 +13,7 @@ public class Gorikon1107 {
     public static void main(String[] args) throws Exception {
         Solution();
     }
-    public static void Solution() throws Exception {
+    public static void Gorikon1107_G() throws Exception {
         tok = new StringTokenizer(Read.readLine());
         h = Integer.parseInt(tok.nextToken());
         w = Integer.parseInt(tok.nextToken());
