@@ -38,7 +38,7 @@ public class KNU_week10_2 {
                 oper[k] = 'b';
                 btk(k+1,bc+1,cc);
             }
-            if(cc<n){
+            if(cc<n && cc<=bc){
                 oper[k] = 'c';
                 btk(k+1,bc,cc+1);
             }
