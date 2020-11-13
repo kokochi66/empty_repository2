@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Euclidean_gcd_lcm {
+public class AL_Euclidean_gcd_lcm {
     static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;

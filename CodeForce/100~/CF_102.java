@@ -6,7 +6,7 @@ public class CF_102 {
     public static void main(String[] args) throws Exception{
         int n = Integer.parseInt(Read.readLine());
         int count = 0;
-        for(int i=1;i<n;i++){
+        for(int i=1;i<=n;i++){
             if(Euclidean_GL(n,i)==1) {
                 count++;
             }
