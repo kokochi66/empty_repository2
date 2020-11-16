@@ -19,5 +19,4 @@ public class javaTraining {
         tok = new StringTokenizer(Read.readLine());
         n = Integer.parseInt(tok.nextToken());
     }
-    
 }
