@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class javaTraining {
+public class KNUcon_1 {
     static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;
@@ -12,11 +12,22 @@ public class javaTraining {
     static boolean[] used, check;
     static int h, w, n, m;
     public static void main(String[] args) throws Exception {
-        Solution();
+        int[][] a ={
+            {1,1},
+            {1,1},
+            {3,3}
+        };
+        solution(a);
     }
-    public static void Solution() throws Exception {
-        int TestCase = Integer.parseInt(Read.readLine());
-        tok = new StringTokenizer(Read.readLine());
-        n = Integer.parseInt(tok.nextToken());
+    public static int solution(int[][] seat) {
+        HashSet<String> set = new HashSet<String>();
+        int res = 0;
+        for(int i=0;i<seat.length;i++){
+            if(!set.contains(seat[i][0]+"-"+seat[i][1])) {
+                set.add(seat[i][0]+"-"+seat[i][1]);
+                res++;
+            }
+        }
+        return res;
     }
 }
