@@ -12,6 +12,7 @@ public class CONT_1117 {
     static int[] arr, oper;
     static boolean[] used, check;
     static int h, w, n, m;
+    static Queue<Integer[]> queue;
     public static void main(String[] args) throws Exception {
         Solution();
     }
@@ -25,10 +26,10 @@ public class CONT_1117 {
             for(int i=0;i<h;i++){
                 dcarr[i] = Read.readLine().toCharArray();
             }
-            // 입력부 O
             int count  = 0;
-            for(int i=0;i<h;i++){
-                for(int j=0;j<w;j++){
+            queue = new LinkedList<Integer[]>();
+            for(int i=0;i<h-1;i++){
+                for(int j=0;j<w-1;j++){
                     int oc = 0 ;
                     if(i<h-1&&j<w-1){
                         for(int k=i;k<i+2;k++){
@@ -38,130 +39,109 @@ public class CONT_1117 {
                         }
                     }
                     if(oc == 4){
-                        // System.out.println("oc4으로 들어옴");
                         CONT_1117_3_dfs(i,j, 1);
                         count++;
                     } else if(oc == 3){
-                        // System.out.println("oc3으로 들어옴");
                         CONT_1117_3_dfs(i,j, 2);
                         count++;
+                    } else if(oc == 2){
+                        CONT_1117_3_dfs(i,j,3);
+                        count+=2;
                     }
-                    else if(dcarr[i][j]=='1'){
+                    else if(oc == 1){
                         CONT_1117_3_dfs(i,j, 0);
-                        // 잔반처리
                         count+=3;
                     }
                 }
+                // for(int t1=0;t1<h;t1++) System.out.println(Arrays.toString(dcarr[t1]));
             }
-            System.out.println(count);
-            Write.flush();
+            Write.write(count+"");
+            Write.newLine();
+            while(!queue.isEmpty()){
+                Integer[] c = queue.poll();
+                for(int i=0;i<c.length;i++) Write.write(c[i]+" ");
+                Write.newLine();
+            }
+            Write.write(count+"");
+            Write.newLine();
         }
+        Write.flush();
     }
     public static void CONT_1117_3_dfs(int hi, int wi, int dir) throws Exception{
         if(dir==0) {
-            // 잔반처리입력
-            if(wi<w-1&&hi<h-1) {
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi+1][wi] = dcarr[hi+1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi+1] = dcarr[hi][wi+1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+2)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi-1] = dcarr[hi][wi-1] == '0' ?  '1' : '0';
-                dcarr[hi+1][wi] = dcarr[hi+1][wi] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+1)+" "+(wi)+" "+(hi+2)+" "+(wi+1)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi-1][wi] = dcarr[hi-1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi+1] = dcarr[hi][wi+1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
-            } else if(wi>0 &&hi<h-1) {
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi-1] = dcarr[hi][wi-1] == '0' ?  '1' : '0';
-                dcarr[hi+1][wi] = dcarr[hi+1][wi] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+1)+" "+(wi)+" "+(hi+2)+" "+(wi+1)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi+1][wi] = dcarr[hi+1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi+1] = dcarr[hi][wi+1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+2)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi-1][wi] = dcarr[hi-1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi-1] = dcarr[hi][wi-1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi)+" "+(wi+1)+" "+(hi+1)+" "+(wi)+" ");
-                Write.newLine();
-            } else if(wi<w-1 &&hi>0) {
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi-1][wi] = dcarr[hi-1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi+1] = dcarr[hi][wi+1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi-1][wi] = dcarr[hi-1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi-1] = dcarr[hi][wi-1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi)+" "+(wi+1)+" "+(hi+1)+" "+(wi)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi+1][wi] = dcarr[hi+1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi+1] = dcarr[hi][wi+1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+2)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
-            } else if(wi>0 &&hi>0) {
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi-1][wi] = dcarr[hi-1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi-1] = dcarr[hi][wi-1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi)+" "+(wi+1)+" "+(hi+1)+" "+(wi)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi-1][wi] = dcarr[hi-1][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi+1] = dcarr[hi][wi+1] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
-                dcarr[hi][wi] = dcarr[hi][wi] == '0' ?  '1' : '0';
-                dcarr[hi][wi-1] = dcarr[hi][wi-1] == '0' ?  '1' : '0';
-                dcarr[hi+1][wi] = dcarr[hi+1][wi] == '0' ?  '1' : '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+1)+" "+(wi)+" "+(hi+2)+" "+(wi+1)+" ");
-                Write.newLine();
-            } 
+            if(dcarr[hi][wi]=='1'){
+                dcarr[hi][wi] = '0';
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+1)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
+            } else if(dcarr[hi][wi+1]=='1'){
+                dcarr[hi][wi+1] = '0';
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+1)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
+                queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+2),(hi+2),(wi+1)});
+            } else if(dcarr[hi+1][wi]=='1'){
+                dcarr[hi+1][wi] = '0';
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+1)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
+                queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+2),(hi+2),(wi+1)});
+            } else if(dcarr[hi+1][wi+1]=='1'){
+                dcarr[hi+1][wi+1] = '0';
+                queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+2),(hi+2),(wi+1)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
+            }
         }
         else if(dir==1){
-            // 메인입력 (4)
             dcarr[hi][wi] = '0';
             dcarr[hi+1][wi] = '0';
             dcarr[hi][wi+1] = '0';
-            Write.write((hi+1)+" "+(wi+1)+" "+(hi+2)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-            Write.newLine();
+            queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+1),(wi+2)});
         }
         else if(dir==2){
-            // 차선입력 (3)
             if(dcarr[hi][wi]=='0') {
-                dcarr[hi][wi+1] = '0';
-                dcarr[hi+1][wi] = '0';
-                dcarr[hi+1][wi+1] = '0';
-                Write.write((hi+1)+" "+(wi+2)+" "+(hi+2)+" "+(wi+1)+" "+(hi+2)+" "+(wi+2)+" ");
-                Write.newLine();
+                queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+1),(hi+2),(wi+2)});
             } else if(dcarr[hi+1][wi]=='0') {
-                dcarr[hi][wi] = '0';
-                dcarr[hi][wi+1] = '0';
-                dcarr[hi+1][wi+1] = '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" "+(hi+2)+" "+(wi+2)+" ");
-                Write.newLine();
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
             } else if(dcarr[hi][wi+1]=='0') {
-                dcarr[hi][wi] = '0';
-                dcarr[hi+1][wi] = '0';
-                dcarr[hi+1][wi+1] = '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+2)+" "+(wi+1)+" "+(hi+2)+" "+(wi+2)+" ");
-                Write.newLine();
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
             } else if(dcarr[hi+1][wi+1]=='0') {
-                dcarr[hi][wi] = '0';
-                dcarr[hi+1][wi] = '0';
-                dcarr[hi][wi+1] = '0';
-                Write.write((hi+1)+" "+(wi+1)+" "+(hi+2)+" "+(wi+1)+" "+(hi+1)+" "+(wi+2)+" ");
-                Write.newLine();
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+1),(wi+2)});
             }
-
+            dcarr[hi][wi] = '0';
+            dcarr[hi][wi+1] = '0';
+            dcarr[hi+1][wi] = '0';
+            dcarr[hi+1][wi+1] = '0';
+        }
+        else if(dir==3){
+            if(dcarr[hi][wi]=='1'){
+                if(dcarr[hi][wi+1]=='1') {
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
+                    queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+2),(hi+2),(wi+1)});
+                }
+                else if(dcarr[hi+1][wi]=='1') {
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
+                    queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+1),(hi+2),(wi+2)});
+                }
+                else if(dcarr[hi+1][wi+1]=='1'){
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+1)});
+                    queue.offer(new Integer[]{(hi+1),(wi+2),(hi+2),(wi+1),(hi+2),(wi+2)});
+                }
+            } else if(dcarr[hi][wi+1]=='1'){
+                if(dcarr[hi+1][wi+1]=='1') {
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+1)});
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
+                }else if(dcarr[hi+1][wi]=='1') {
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
+                    queue.offer(new Integer[]{(hi+1),(wi+1),(hi+2),(wi+1),(hi+2),(wi+2)});
+                }
+            } else {
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+1)});
+                queue.offer(new Integer[]{(hi+1),(wi+1),(hi+1),(wi+2),(hi+2),(wi+2)});
+            }
+            dcarr[hi][wi] = '0';
+            dcarr[hi][wi+1] = '0';
+            dcarr[hi+1][wi] = '0';
+            dcarr[hi+1][wi+1] = '0';
         }
     }
     public static void CONT_1117_2() throws Exception {

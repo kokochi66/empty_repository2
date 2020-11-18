@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Kruskal_test {
+public class AL_Kruskal_test {
     static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;
