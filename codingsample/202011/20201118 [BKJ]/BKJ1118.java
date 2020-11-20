@@ -16,6 +16,29 @@ public class BKJ1118 {
         Solution();
     }
     public static void Solution() throws Exception {
+        tok = new StringTokenizer(Read.readLine());
+        n = Integer.parseInt(tok.nextToken());
+        m = Integer.parseInt(tok.nextToken());
+        int k = Integer.parseInt(tok.nextToken());
+        arr = new int[n];
+        for(int i=1;i<=n;i++) arr[i-1] = i;
+        if(n <= ((m-1)*k) && n-k>=m-1){
+            for(int i=k;i>=1;i--) Write.write(i+" ");
+            m--;
+            int c = k+1, paring = (n-k)/m;
+            while(c <= n){
+                if(m==1) {
+                    for(int i=n;i>=c;i--) Write.write(i+" ");
+                    break;
+                }
+                else for(int i=c+paring-1;i>=c;i--) Write.write(i+" ");
+                c += paring;
+                m--;
+            }
+        } else Write.write("-1");
+        Write.flush();
+    }
+    public static void BKJ1118_2() throws Exception {
         int TestCase = Integer.parseInt(Read.readLine());
         for(int TT=0;TT<TestCase;TT++){
             n = Integer.parseInt(Read.readLine());

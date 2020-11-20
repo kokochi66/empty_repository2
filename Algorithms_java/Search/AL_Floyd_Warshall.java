@@ -1,3 +1,5 @@
+package Algorithms_java.Search;
+
 import java.util.Arrays;
 
 public class AL_Floyd_Warshall {

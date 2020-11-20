@@ -1,3 +1,5 @@
+package Algorithms_java.Search;
+
 public class AL_Binary_Tree {
 
     public static void main(String[] args){

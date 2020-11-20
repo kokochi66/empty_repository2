@@ -1,3 +1,5 @@
+package Algorithms_java.String;
+
 public class AL_Longest_SubSequence {
     public static void main(String[] args){
         String a = "bbbbabab";

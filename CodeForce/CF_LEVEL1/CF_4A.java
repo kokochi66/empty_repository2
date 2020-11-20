@@ -1,3 +1,5 @@
+package CodeForce.CF_LEVEL1;
+
 import java.io.*;
 
 public class CF_4A {

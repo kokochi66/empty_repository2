@@ -78,42 +78,4 @@ public class KNU_week11_3 {
             this.broad[des++] = s;
         }
     }
-
-    static class NWGraph {
-        private ArrayList<ArrayList<Integer>> gr;
-        public NWGraph(int size){
-            gr = new ArrayList<ArrayList<Integer>>();
-            for(int i=0;i<size;i++){
-                gr.add(new ArrayList<Integer>());
-            }
-        }
-
-        public void putSingle(int a, int b){
-            gr.get(a).add(b);
-        }
-        public void put(int a, int b){
-            gr.get(a).add(b);
-            gr.get(b).add(a);
-        }
-
-        public void printNode(){
-            for(int i=0;i<gr.size();i++){
-                System.out.print((i)+"번째 노드 연결값 :: ");
-                System.out.print("[ ");
-                for(int j=0;j<gr.get(i).size();j++){
-                    System.out.print("("+(gr.get(i).get(j))+") ");
-                }
-                System.out.println("]");
-            }
-        }
-        public ArrayList<ArrayList<Integer>> getGraph(){
-            return gr;
-        }
-        public ArrayList<Integer> getNode(int a){
-            return gr.get(a);
-        }
-        public int size() {
-            return gr.size();
-        }
-    }
 }

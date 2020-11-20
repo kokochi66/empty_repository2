@@ -1,3 +1,5 @@
+package Algorithms_java.Search;
+
 import java.util.*;
 import java.io.*;
 
