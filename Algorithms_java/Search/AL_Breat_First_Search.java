@@ -1,4 +1,3 @@
-package Algorithms_java.Search;
 
 import java.util.*;
 
