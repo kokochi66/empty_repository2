@@ -1,4 +1,3 @@
-package Algorithms_java.Math;
 
 import java.util.*;
 import java.io.*;
@@ -14,7 +13,7 @@ public class AL_Euclidean_gcd_lcm {
     static boolean[] used, check;
     static int h, w, n, m;
     public static void main(String[] args) throws Exception {
-        System.out.println(Euclidean_GL(78696,19332));
+        System.out.println(Euclidean_GL(64,24));
     }
     public static int Euclidean_GL(int a, int b) throws Exception {
         int max = Math.max(a, b);
@@ -32,6 +31,6 @@ public class AL_Euclidean_gcd_lcm {
         }
         // 최소공배수 = (a*b)/res
         // 최대공약수 = res
-        return res;
+        return (a*b)/res;
     }
 }

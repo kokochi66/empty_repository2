@@ -1,4 +1,3 @@
-package Algorithms_java.Math;
 
 import java.util.ArrayList;
 import java.util.Arrays;

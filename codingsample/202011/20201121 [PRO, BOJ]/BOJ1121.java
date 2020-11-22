@@ -57,7 +57,7 @@ public class BOJ1121 {
             int hn = hi + vect_h[i];
             int wn = wi + vect_w[i];
             if(hn>=0 && wn>=0 && hn<n && wn<m && darr[hn][wn] < darr[hi][wi]) {
-                doper[hi][wi] += BOJ1121_1_dfs(hn,wn);
+                doper[hi][wi] += BOJ1121_2_dfs(hn,wn);
             }
         }
         dused[hi][wi] = true;
