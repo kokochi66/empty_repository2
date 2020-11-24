@@ -101,7 +101,7 @@ public class PRO1123 {
             }
         }
     }
-    public int solution(int n) {
+    public int solution6(int n) {
         int count = 0;
         while(n>1) {
             if(n%2==0) n/=2;
