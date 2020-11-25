@@ -18,8 +18,6 @@ public class CONT_1113 {
         n = Integer.parseInt(Read.readLine());
         arr = new int[n];
         tok = new StringTokenizer(Read.readLine());
-        int max = 0;
-        int[] counter = new int[10500];
         for(int i=0;i<n;i++) arr[i] = Integer.parseInt(tok.nextToken());
         
     }

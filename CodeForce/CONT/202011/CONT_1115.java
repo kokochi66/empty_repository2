@@ -18,13 +18,10 @@ public class CONT_1115 {
     public static void Solution() throws Exception {
         n = Integer.parseInt(Read.readLine());
         arr = new int[n];
-        HashSet<Integer> set = new HashSet<>();
-        int count = 0;
         int bit = 1<<30;
         tok = new StringTokenizer(Read.readLine());
         for(int i=0;i<n;i++){
             arr[i] = Integer.parseInt(tok.nextToken());
-            int c = arr[i];
         }
         int temp;
         for(int i=1;i<n;i++){
@@ -86,15 +83,13 @@ public class CONT_1115 {
         char[] arr1 = Read.readLine().toCharArray();
         char[] arr2 = Read.readLine().toCharArray();
         char[][] darr = new char[n+1][m+1];
-        int max = -1, ac=0, bc=0;
+        int max = -1;
         for(int i=1;i<n+1;i++){
             for(int j=1;j<m+1;j++){
                 if(arr1[i-1] == arr2[j-1]) darr[i][j] = (char)(darr[i-1][j-1]+1);
                 else darr[i][j] = (char)Math.max(darr[i-1][j],darr[i][j-1]);
                 if(max < (int)darr[i][j]) {
                     max = (int)darr[i][j];
-                    ac = i;
-                    bc = j;
                 }
             }
         }
