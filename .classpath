@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="~2020.11.26 - Algorithms_java/Data Structure/List"/>
+	<classpathentry kind="src" path="~2020.11.26 - Algorithms_java/Math"/>
+	<classpathentry kind="src" path="~2020.11.26 - Algorithms_java/Search"/>
+	<classpathentry excluding="20201121CONT/" kind="src" path="~2020.11.26 - CodeForce/CONT/202011"/>
+	<classpathentry kind="src" path="~2020.11.26 - CodeForce/CONT/202011/20201121CONT"/>
+	<classpathentry excluding="202009/20200904 [Intro 복습 + Core 진행]/|202011/20201119 [BKJ]/|202011/20201122 [PRO]/|202009/20200914 [Core 진행 + java 문자열]/|202011/20201117 [KNUcon]/|202009/20200928[Pro 진행]/|202010/20201015 [pro_sort_1]/|202011/20201116 [BKJ]/|202011/20201108 [BKJ]/|202011/20201113 [BKJ]/|202009/20200912 [Core 진행]/|202011/20201105 [BKJ]/|202011/20201110 [BKJ]/|202009/20200927[Pro 진행 + java Stream, Executor]/|202010/20201016 [pro_brute_1]/|202010/20201020 [Selection,Bubble,Insertion,Quick,Heap]/|202009/20200905 [Core 진행]/|202009/20200910 [Core 진행]/|202010/20201001 [pro1_8]/|202010/20201018 [pro_StackQueue_2]/|202009/20200920[Core 진행]/|202009/20200926[Pro 진행]/|202010/20201014 [pro_heap_1 + 학교실습]/|202009/20200916 [학교실습 + bkj진행]/|202010/20201006 [pro2_7~8]/|202010/20201023 [SortTest2, SortBKJ]/|202011/20201114 [BKJ]/|202009/20200925[Pro 진행]/|202010/20201006 [pro2_7]/|202010/20201007 [pro2_9~10 + 학교실습]/|202011/20201102 [BKJ + BF]/|202009/20200908 [Core 진행]/|202011/20201103 [BKJ]/|202009/20200902/|202009/20200930[Pro 진행 + Calendar]/|202010/20201009 [pro2_11~15]/|202010/20201030 [BKJ]/|202011/20201111 [BKJ + KNU]/|202009/20200924[학교실습 + bkj 진행]/|202010/20201010 [pro2_16]/|202010/20201027 [StackBKJ2]/|202011/20201112 [BKJ]/|202009/20200915 [java 라이브러리]/|202009/20200903/|202011/20201104 [PKNU_W9-10 + BKJ]/|202010/20201029 [BKJ]/|202011/20201121 [PRO, BOJ]/|202009/20200907 [Intro 복습 + Core 진행]/|202010/20201031 [BKJ]/|202010/20201021 [Merge]/|202009/20200911/|202010/20201013 [pro_stack&amp;queue_1]/|202010/20201002 [pro1_9]/|202009/20200917 [bkj 진행]/|202009/20200929[pro 진행]/|202011/20201115 [BKJ]/|202010/20201019 [pro_StackQueue_3]/|202011/20201124 [PRO + SW]/|202010/20201008 [pro]/|202010/20201011 [pro2_17~20]/|202011/20201101 [prs, BKJ]/|202011/20201123 [PRO + BOJ]/|202011/20201109 [BKJ]/|202010/20201003 [pro1_10~30]/|202011/20201106 [BKJ]/|202010/20201025 [SortBKJ3]/|202010/20201022 [Counting,SortTest1]/|202010/20201024 [SortBKJ2]/|202011/20201118 [BKJ]/|202010/20201005 [pro2_4~6]/|202010/20201028 [BKJ + 학교실습]/|202009/20200906 [Core 진행]/|202010/20201026 [StackBKJ]/|202010/20201017 [pro_hash2~4]/|202009/20200909 [학교실습]/|202010/20201004 [pro1_31~41, pro2_1~3]/|202011/20201107 [BKJ]/|202010/20201012 [pro2_21 &amp;&amp; pro_Hash_1]/|202009/20200922[bkj 진행 + java 문자열]/|202009/20200918[bkj 진행]/|202009/20200921/|202011/20201120 [PRO]/" kind="src" path="~2020.11.26 - codingsample"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200902"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200903"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200904 [Intro 복습 + Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200905 [Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200906 [Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200907 [Intro 복습 + Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200908 [Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200909 [학교실습]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200910 [Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200911"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200912 [Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200914 [Core 진행 + java 문자열]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200915 [java 라이브러리]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200916 [학교실습 + bkj진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200917 [bkj 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200918[bkj 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200920[Core 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200921"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200922[bkj 진행 + java 문자열]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200924[학교실습 + bkj 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200925[Pro 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200926[Pro 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200927[Pro 진행 + java Stream, Executor]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200928[Pro 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200929[pro 진행]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202009/20200930[Pro 진행 + Calendar]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201001 [pro1_8]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201002 [pro1_9]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201003 [pro1_10~30]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201004 [pro1_31~41, pro2_1~3]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201005 [pro2_4~6]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201006 [pro2_7]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201006 [pro2_7~8]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201007 [pro2_9~10 + 학교실습]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201008 [pro]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201009 [pro2_11~15]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201010 [pro2_16]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201011 [pro2_17~20]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201012 [pro2_21 &amp;&amp; pro_Hash_1]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201013 [pro_stack&amp;queue_1]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201014 [pro_heap_1 + 학교실습]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201015 [pro_sort_1]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201016 [pro_brute_1]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201017 [pro_hash2~4]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201018 [pro_StackQueue_2]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201019 [pro_StackQueue_3]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201020 [Selection,Bubble,Insertion,Quick,Heap]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201021 [Merge]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201022 [Counting,SortTest1]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201023 [SortTest2, SortBKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201024 [SortBKJ2]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201025 [SortBKJ3]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201026 [StackBKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201027 [StackBKJ2]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201028 [BKJ + 학교실습]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201029 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201030 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202010/20201031 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201101 [prs, BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201102 [BKJ + BF]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201103 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201104 [PKNU_W9-10 + BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201105 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201106 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201107 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201108 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201109 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201110 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201111 [BKJ + KNU]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201112 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201113 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201114 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201115 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201116 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201117 [KNUcon]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201118 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201119 [BKJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201120 [PRO]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201121 [PRO, BOJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201122 [PRO]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201123 [PRO + BOJ]"/>
+	<classpathentry kind="src" path="~2020.11.26 - codingsample/202011/20201124 [PRO + SW]"/>
+	<classpathentry kind="src" path="Coding_Algorithms/Study_Project/AL"/>
+	<classpathentry kind="src" path="Coding_Algorithms/Study_Project/src"/>
+	<classpathentry kind="output" path="Coding_Algorithms/Study_Project/bin"/>
+</classpath>

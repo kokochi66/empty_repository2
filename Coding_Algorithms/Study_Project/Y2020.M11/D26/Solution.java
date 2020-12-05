@@ -1,4 +1,4 @@
-package Y2020.M11.D26;
+package D26;
 
 import java.util.*;
 public class Solution {

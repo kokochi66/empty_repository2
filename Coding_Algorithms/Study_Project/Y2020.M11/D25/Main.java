@@ -1,5 +1,4 @@
-package Y2020.M11.D25;
-
+package D25;
 import java.util.*;
 
 import java.io.*;

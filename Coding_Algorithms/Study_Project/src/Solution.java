@@ -1,6 +1,7 @@
 import java.util.*;
+
 import java.io.*;
-public class Main {
+public class Solution {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
