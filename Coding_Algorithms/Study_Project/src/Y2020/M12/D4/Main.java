@@ -56,35 +56,29 @@ public class Main {
 		}
 	}
 	public static void check(int[] swit, int x, int y) {
-		if(swit[1] >= y) {
+		if(swit[1] > y) {
 			swit[0] = x;
 			swit[1] = y;
 		}
-		if(swit[3] <= y) {
+		if(swit[3] < y) {
 			swit[2] = x;
 			swit[3] = y;
 		}
-		if(swit[4] >= x) {
+		if(swit[4] > x) {
 			swit[4] = x;
 			swit[5] = y;
 		}
-		if(swit[6] <= x) {
+		if(swit[6] < x) {
 			swit[6] = x;
 			swit[7] = y;
 		}
 	}
 	
 	public static int area(int n, int[] swit1, int[] swit2) {
-		int max = 0;
-		boolean height = false;
-		if(Math.abs(swit1[0]-swit2[0]) > Math.abs(swit1[1]-swit2[1])) height = true;
-		if(height) {
-			max = Math.abs(swit1[0]-swit2[0]) * Math.max(
-					Math.max(swit1[1]-0, n-1-swit1[1]), Math.max(swit2[1]-0, n-1-swit2[1]));
-		} else {
-			max = Math.abs(swit1[1]-swit2[1]) * Math.max(
-					Math.max(swit1[0]-0, n-1-swit1[0]), Math.max(swit2[0]-0, n-1-swit2[0]));
-		}
+		int max = Math.max(Math.abs(swit1[0]-swit2[0]) * Math.max(
+				Math.max(swit1[1]-0, n-1-swit1[1]), Math.max(swit2[1]-0, n-1-swit2[1])),
+				Math.abs(swit1[1]-swit2[1]) * Math.max(
+						Math.max(swit1[0]-0, n-1-swit1[0]), Math.max(swit2[0]-0, n-1-swit2[0])));
 		return max;
 	}
 //	public static void solution() throws Exception {
