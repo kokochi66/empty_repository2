@@ -19,67 +19,40 @@ public class Main {
 			}
 //			for(int i=0;i<n;i++) System.out.println(Arrays.toString(carr[i]));
 			int[] dp = new int [10];
-			int[][] swit = new int[10][8];
-			// 0-1 = left
-			// 2-3 = right
-			// 4-5 = top
-			// 6-7 = bottom
-			boolean[] used = new boolean[10];
+			int[][] swit = new int[10][4];
+			final int inf = 50000;
+			for(int i=0;i<10;i++) {
+				swit[i][0] = inf;
+				swit[i][2] = inf;
+			}
+			// 0 = left
+			// 1 = right
+			// 2 = top
+			// 3 = bottom
 			for(int i=0;i<n;i++){
 				for(int j=0;j<n;j++) {
 					int c = carr[i][j] - '0';
-					if(!used[c]) {
-						used[c] = true;
-						init(swit[c], i, j);
-					}
-					else {
-						int cMax = Math.max(Math.max(area(n,new int[]{swit[c][0],swit[c][1]}, new int[]{i,j}), area(n,new int[]{swit[c][6],swit[c][7]}, new int[]{i,j})), 
-								Math.max(area(n,new int[]{swit[c][2],swit[c][3]}, new int[]{i,j}), area(n,new int[]{swit[c][4],swit[c][5]}, new int[]{i,j})));
-						if(cMax > dp[c]) dp[c] = cMax;
-						check(swit[c],i,j);
-					}
+					check(swit[c],i,j);
 				}
 			}
-//			for(int i=0;i<10;i++) {
-//				System.out.println(Arrays.toString(swit[i]));
-////				dp[i] = Math.max(area(n,new int[]{swit[i][4],swit[i][5]}, new int[]{swit[i][6],swit[i][7]}), 
-////						area(n,new int[]{swit[i][0],swit[i][1]}, new int[]{swit[i][2],swit[i][3]}));
-//			}
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<n;j++) {
+					int c = carr[i][j] - '0';
+					dp[c] = Math.max(dp[c], Math.max(i-swit[c][2], swit[c][3]-i)*Math.max(n-j-1, j));
+					dp[c] = Math.max(dp[c], Math.max(j-swit[c][0], swit[c][1]-j)*Math.max(n-i-1, i));
+				}
+			}
+//			for(int i=0;i<10;i++) System.out.println(Arrays.toString(swit[i]));
+//			System.out.println(Arrays.toString(dp));
 			for(int i : dp) System.out.print(i+" ");
 			System.out.println();
 		}
 	}
-	public static void init(int[] swit, int x, int y) {
-		for(int i=0;i<4;i++) {
-			swit[i*2] = x;
-			swit[(i*2)+1]=y;
-		}
-	}
 	public static void check(int[] swit, int x, int y) {
-		if(swit[1] > y) {
-			swit[0] = x;
-			swit[1] = y;
-		}
-		if(swit[3] < y) {
-			swit[2] = x;
-			swit[3] = y;
-		}
-		if(swit[4] > x) {
-			swit[4] = x;
-			swit[5] = y;
-		}
-		if(swit[6] < x) {
-			swit[6] = x;
-			swit[7] = y;
-		}
-	}
-	
-	public static int area(int n, int[] swit1, int[] swit2) {
-		int max = Math.max(Math.abs(swit1[0]-swit2[0]) * Math.max(
-				Math.max(swit1[1]-0, n-1-swit1[1]), Math.max(swit2[1]-0, n-1-swit2[1])),
-				Math.abs(swit1[1]-swit2[1]) * Math.max(
-						Math.max(swit1[0]-0, n-1-swit1[0]), Math.max(swit2[0]-0, n-1-swit2[0])));
-		return max;
+		swit[0] = Math.min(swit[0],  y);
+		swit[1] = Math.max(swit[1],  y);
+		swit[2] = Math.min(swit[2],  x);
+		swit[3] = Math.max(swit[3],  x);
 	}
 //	public static void solution() throws Exception {
 //		int TestCase = Integer.parseInt(rd.readLine());

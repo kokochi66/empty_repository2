@@ -17,7 +17,7 @@ public class Main {
 				crr[i] = rd.readLine().toCharArray();
 			}
 			int[][] arr = new int[n][n];
-			int[][] pos = new int[(n*2)-1][2];
+			int[][] pos = new int[4][10];
 			for(int i=0;i<n;i++) {
 				pos[i][0] = i;
 				pos[n-1+i][0] = n-1;
