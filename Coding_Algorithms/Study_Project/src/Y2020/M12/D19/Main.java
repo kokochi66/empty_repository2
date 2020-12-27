@@ -6,43 +6,29 @@ public class Main {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
-//		solution();
-		System.out.println(ea(31,127));
+		solution();
+//		System.out.println(ea(31,127));
 	}
 	public static void solution() throws Exception {
 		tok = new StringTokenizer(rd.readLine());
 		int n = Integer.parseInt(tok.nextToken());
 		int m = Integer.parseInt(tok.nextToken());
-		long[] arr = new long[n+5];
-		long[] brr = new long[m+5];
-		boolean allOdd = true;
 		tok = new StringTokenizer(rd.readLine());
-		for(int i=0;i<n;i++) {
-			arr[i] = Long.parseLong(tok.nextToken());
-			if(arr[i]%2!=0) allOdd = false;
-		}
+		long[] arr = new long[n];
+		for(int i=0;i<n;i++) arr[i] = Long.parseLong(tok.nextToken());
 		Arrays.sort(arr);
 		tok = new StringTokenizer(rd.readLine());
-		for(int i=0;i<m;i++) {
-			brr[i] = Long.parseLong(tok.nextToken());
-		}
+		long[] brr = new long[m];
+		for(int i=0;i<m;i++) brr[i] = Long.parseLong(tok.nextToken());
+		// insert
 		
-		long[] sub = new long[n];
-		for(int i=1;i<n;i++) {
-			sub[i-1] = arr[i] - arr[i-1];
-		}
-		long gcd = n>2 ? ea(Math.max(sub[0],sub[1]),
-				Math.min(sub[0],sub[1])) : sub[0];
-		for(int j=2;j<n;j++) {
-			gcd = ea(Math.max(sub[j],gcd),Math.min(sub[j],gcd));
-		}
+		long gcd = n>1 ? arr[1]-arr[0] : 0;
+		for(int i=1;i<n;i++) gcd = ea(arr[i]-arr[0],gcd);
 		
 		for(int i=0;i<m;i++) {
-			wr.write((gcd+brr[i])+" ");
+			wr.write(ea(arr[0]+brr[i],gcd)+" ");
 		}
 		wr.flush();
-//		System.out.println(Arrays.toString(arr));
-//		System.out.println(Arrays.toString(brr));
 	}
 	
 	public static long ea(long x, long y) {
