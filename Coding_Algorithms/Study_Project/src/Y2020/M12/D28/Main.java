@@ -34,7 +34,7 @@ public class Main {
 					dice[5] = board[sw[0]][sw[1]];
 					board[sw[0]][sw[1]] = 0;
 				}
-				wr.write(Arrays.toString(dice));
+				wr.write(dice[0]+"");
 				wr.newLine();
 			}
 		}
@@ -53,11 +53,11 @@ public class Main {
 			if(sw[1]-1<0) return false;
 			else sw[1] -=1;
 		} else if(d==3) {
-			dc =  new int[] {1,5,2,3,0,4};
+			dc =  new int[] {4,0,2,3,5,1};
 			if(sw[0]-1<0) return false;
 			else sw[0] -=1;
 		} else if(d==4) {
-			dc =  new int[] {4,0,2,3,5,2};
+			dc =  new int[] {1,5,2,3,0,4};
 			if(sw[0]+1>=n) return false;
 			else sw[0] +=1;
 		}
