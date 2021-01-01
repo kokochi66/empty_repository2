@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="AL"/>
 	<classpathentry kind="src" path="Y2020.M11"/>
+	<classpathentry kind="src" path="Y2020.M12"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
