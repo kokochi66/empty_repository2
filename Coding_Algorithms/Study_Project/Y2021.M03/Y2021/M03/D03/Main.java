@@ -6,9 +6,31 @@ public class Main {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
-		solution4();
+		solution5();
 	}
-	
+	public static void solution5() throws Exception {
+		int TestCase = Integer.parseInt(rd.readLine());
+		for(int TT=0;TT<TestCase;TT++) {
+			tok = new StringTokenizer(rd.readLine());
+			int n = Integer.parseInt(tok.nextToken());
+			int Ud = Integer.parseInt(tok.nextToken());
+			int Rd = Integer.parseInt(tok.nextToken());
+			int Dd = Integer.parseInt(tok.nextToken());
+			int Ld = Integer.parseInt(tok.nextToken());
+			boolean pass = false;
+			for(int i=0;i<16;i++) {
+				int u = Ud, r = Rd, d = Dd, l = Ld;
+				if(((i>>0)&1) == 1) {d--; l--;}
+				if(((i>>1)&1) == 1) {d--; r--;}
+				if(((i>>2)&1) == 1) {u--; l--;}
+				if(((i>>3)&1) == 1) {u--; r--;}
+				
+				if(u>=0 && r>=0 && d>=0 && l>=0 && u<=n-2 && r<=n-2 && d<=n-2 && l<=n-2) pass = true;
+			}
+			if(pass) System.out.println("YES");
+			else System.out.println("NO");
+		}
+	}
 	public static void solution4() throws Exception {
 		int n = Integer.parseInt(rd.readLine());
 		boolean[] used = new boolean[n+1];
