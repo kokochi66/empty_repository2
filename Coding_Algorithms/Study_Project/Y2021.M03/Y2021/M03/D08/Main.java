@@ -51,37 +51,49 @@ public class Main {
 			}
 			solution_count(posBox,posPos,POSspd);
 			solution_count(negBox,negPos,NEGspd);
-			System.out.println(Arrays.toString(POSspd));
-			System.out.println(Arrays.toString(NEGspd));
-////			System.out.println(solution_s(negBox, negPos,neg,NEGspd));
+//			System.out.println(Arrays.toString(POSspd));
+//			System.out.println(Arrays.toString(NEGspd));
+//			System.out.println(solution_s(negBox, negPos,NEGspd, 0));
 ////			System.out.println(pos+" "+neg);
-//			System.out.println(Math.max(pos, solution_s(posBox, posPos,pos,POSspd,0))+
-//					Math.max(neg, solution_s(negBox, negPos,neg,NEGspd,0)));
+			System.out.println(Math.max((POSspd.length>0 ? POSspd[0] : 0), solution_s(posBox, posPos,POSspd,0))+
+					Math.max((NEGspd.length>0 ? NEGspd[0] : 0), solution_s(negBox, negPos,NEGspd,0)));
 		}
 	}
-	public static int solution_s(int[] p, int[] t, int spt, boolean[] spd, int TargetPoint) {
-		if(p.length<1 || t.length < 1) return 0;
-		if(TargetPoint == t.length) return 0;
-		else if(t[TargetPoint] < p[0]) return solution_s(p,t,spt,spd,TargetPoint+1);
-		if(p[0] == t[t.length-1]) return 1;
-		if(spd[0]) { spd[0] = false; spt--; }	// 첫값이 이미 체크된 값이라면 체크값을 빼줌
+	public static int solution_s(int[] p, int[] t, int[] spd, int TargetPoint) {
+		if(p.length<1 || t.length < 1) return 0;		// 해당 부분이 존재하지 않는다면 반환
+		if(TargetPoint == t.length) return 0;		// 검사위치가 t범위를 벗어나면 반환
+		else if(t[TargetPoint] < p[0]) return solution_s(p,t,spd,TargetPoint+1); 	// 검사위치가 기존값보다 작다면 다음값으로 이동
+		if(p[0] == t[t.length-1]) return 1;				// 검사위치가 마지막과 일치하면다면 1반환
 		
-		int lastPoint = t[TargetPoint];
-		int index = 1;
-		while(index < p.length && lastPoint >= p[index]) {
-			if(spd[index]) { spd[index]=false; spt--; }
-			index++;
-			lastPoint++;
+		int leftPoint = 0;
+		int rightPoint = 0;
+		
+		// 1. 왼쪽 끝값은 TargetPoint로 지정된다. leftPoint 정의할 필요가 없음.
+		// 2. 오른쪽 끝값은 이진탐색 반복문을 통해 찾아냄 O(N log N)
+		// 끝값의 위치를 p배열에서 찾아내며, 수가 늘어나면 한번 더 찾기를 반복한다.
+		boolean pass = false;
+		int temp = 0;
+		while(!pass) {
+			int tt = Arrays.binarySearch(p, t[TargetPoint] + temp);		// p배열에서 t[TargetP]의 현 끝값의 위치를 찾는다.
+			int right = tt < 0 ? -tt-2 : tt;											// 해당 위치를 특정시킨다. >> 개수가 된다.
+			tt = Arrays.binarySearch(t, t[TargetPoint] + right);
+			right = tt < 0 ? -tt-2 : tt;
+			if(rightPoint == right) pass = true;							// 해당 위치가 현재의 끝값과 일치한다면 반복문을 종료한다.
+			else {
+				rightPoint = right;												// 일치하지 않으면, 끝값을 일치시키고 반복문을 진행한다.
+				temp = right;
+			}
 		}
-		int ts = Arrays.binarySearch(t, lastPoint);  
-		int plsPoint = (ts<0?(-2-ts):ts) - TargetPoint + spt +1;
-//		System.out.println(Arrays.toString(p) +" "+ (ts<0?(-2-ts):ts) +" "+TargetPoint+" "+spt +" "+plsPoint +" "+lastPoint);
-		return Math.max(plsPoint, solution_s(p,t,spt,spd,TargetPoint+1));
+		int ts = rightPoint < spd.length ? spd[rightPoint] : 0;
+		int plsPoint = rightPoint - TargetPoint + ts;
+		System.out.println("TP = "+TargetPoint+" / rP = "+rightPoint+" / pP = "+plsPoint);
+		return Math.max(plsPoint, solution_s(p,t,spd,TargetPoint+1));
 	}
 	
 	public static void solution_count(int[] p, int[] t, int[] spd) {
+		if(p.length<1 || t.length < 1) return;		// 해당 부분이 존재하지 않는다면 반환
 		int i = p.length-1, j = t.length-1;
-		spd[i] = p[i] == t[j] ? 1 : 0;		// 끝값이 같은지 확인
+		spd[i] = Arrays.binarySearch(t, p[i]) >= 0 ? 1 : 0;		// 끝값이 같은지 확인
 		i--;
 		while(i>=0) {
 			spd[i] = spd[i+1];		// dp적용을 통해 현재 값을 다음값만큼 정의
