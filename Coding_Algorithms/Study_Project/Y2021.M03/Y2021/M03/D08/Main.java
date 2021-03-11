@@ -75,18 +75,15 @@ public class Main {
 		int temp = 0;
 		while(!pass) {
 			int tt = Arrays.binarySearch(p, t[TargetPoint] + temp);		// p배열에서 t[TargetP]의 현 끝값의 위치를 찾는다.
-			int right = tt < 0 ? -tt-2 : tt;											// 해당 위치를 특정시킨다. >> 개수가 된다.
-			tt = Arrays.binarySearch(t, t[TargetPoint] + right);
-			right = tt < 0 ? -tt-2 : tt;
-			if(rightPoint == right) pass = true;							// 해당 위치가 현재의 끝값과 일치한다면 반복문을 종료한다.
-			else {
-				rightPoint = right;												// 일치하지 않으면, 끝값을 일치시키고 반복문을 진행한다.
-				temp = right;
-			}
+			temp = tt < 0 ? -tt-2 : tt;											// 해당 위치를 특정시킨다. >> 개수가 된다.
+			if(rightPoint == t[TargetPoint] + temp) break;							// 해당 위치가 현재의 끝값과 일치한다면 반복문을 종료한다.
+			else rightPoint = t[TargetPoint] + temp;
 		}
-		int ts = rightPoint < spd.length ? spd[rightPoint] : 0;
+		int tt = Arrays.binarySearch(t , rightPoint);
+		rightPoint = tt < 0 ? -tt-1 : tt+1;
+		int ts = temp+1 < spd.length ? spd[temp+1] : 0;
 		int plsPoint = rightPoint - TargetPoint + ts;
-		System.out.println("TP = "+TargetPoint+" / rP = "+rightPoint+" / pP = "+plsPoint);
+//		System.out.println("TP = "+TargetPoint+" / rP = "+rightPoint+" / pP = "+plsPoint +" / ts = "+ts);
 		return Math.max(plsPoint, solution_s(p,t,spd,TargetPoint+1));
 	}
 	
