@@ -30,7 +30,7 @@ public class Main {
 			if(f != -1) {
 				left = f;
 			}
-			System.out.println(i+" "+max+" "+(i-left));
+//			System.out.println(i+" "+max+" "+(i-left));
 			max = Math.max(max, i - left);
 		}
 		System.out.println(max);
