@@ -1,11 +1,11 @@
 import java.io.*;
 import java.util.*;
- 
-public class CF1494D extends PrintWriter {
-	CF1494D() { super(System.out); }
+public class test extends PrintWriter {
+	test() { super(System.out); }
 	Scanner sc = new Scanner(System.in);
 	public static void main(String[] $) {
-		CF1494D o = new CF1494D(); o.main(); o.flush();
+		
+		test o = new test(); o.main(); o.flush();
 	}
  
 	int[] qq;
@@ -29,28 +29,26 @@ public class CF1494D extends PrintWriter {
 			int av = aa[v / n][v % n];
 			return au - av;
 		});
-		System.out.println(Arrays.toString(hh));
-		
 		int k = n + n - 1;
-		
 		int[] cc = new int[k];
-		
-		for (int i = 0; i < n; i++) cc[i] = aa[i][i];
-		
+		for (int i = 0; i < n; i++)
+			cc[i] = aa[i][i];
 		int[] pp = new int[k]; Arrays.fill(pp, -1);
 		qq = new int[k]; Arrays.fill(qq, -1);
 		k = n;
-		
 		for (int h = 0; h < m; h++) {
 			int u = hh[h], i = u / n, j = u % n, a = aa[i][j];
 			i = find(i);
 			j = find(j);
-			System.out.println("u:"+u+" i:"+i+" j:"+j+" a:"+a);
 			if (i != j) {
 				pp[i] = qq[i] = pp[j] = qq[j] = k;
 				cc[k++] = a;
 			}
 		}
+		System.out.println(Arrays.toString(pp));
+		System.out.println(Arrays.toString(qq));
+		System.out.println(Arrays.toString(cc));
+		System.out.println(k);
 		int k_ = 0;
 		int[] ii = new int[k];
 		for (int i = 0; i < k - 1; i++)
