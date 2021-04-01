@@ -9,7 +9,6 @@ public class Main {
 		solution2();
 		
 	}
-	// asdfasdfasdf
 	public static void solution2() throws Exception {
 		tok = new StringTokenizer(rd.readLine());
 		int song =  Integer.parseInt(tok.nextToken());
