@@ -1,6 +1,7 @@
+package Y2021.M04.D03;
 import java.util.*;
 import java.io.*;
-public class test {
+public class Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;

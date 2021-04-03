@@ -6,7 +6,58 @@ public class Main {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
-		solution2();
+		solution3();
+	}
+	
+	public static void solution3() throws Exception {
+		int n = Integer.parseInt(rd.readLine());
+		System.out.println("! "+sol3_rec(1,n,n));
+	}
+	
+	public static int sol3_rec(int left, int right, int n) throws Exception{
+		if(left == right) return left;
+		else if(right - left == 1) return sol3_ret(left,right);
+		// 최초로 전체서칭
+
+		int mid = sol3_query(left,right);
+		// 전체서칭하여 중간이 될 값의 위치를 선정 (두번째로 큰 값)
+		int fLeft = left, fMid = mid, fRight = right;
+		fMid = sol3_query(fLeft, mid);
+		if(fMid == mid) {
+			while(fMid == mid) {
+				if(fMid - fLeft == 1) return fLeft;
+				else if(fMid - fLeft == 2) return sol3_ret(fLeft,fLeft+1);
+				left = fLeft;
+				fLeft = (fLeft + fMid)/2;
+				fMid = sol3_query(fLeft, mid);
+			}
+			return sol3_rec(left, fLeft-1,n);
+		}
+		// 왼쪽절반을 체크함
+		
+		fRight = (mid + right)/2;
+		fMid = sol3_query(mid, fRight);
+		if(fMid == mid) {
+			while(fMid == mid) {
+				if(fRight - fMid == 1) return fRight;
+				else if(fRight - fMid == 2) return sol3_ret(fRight-1,fRight);
+				right = fRight;
+				fRight = (fMid + fRight)/2;
+				fMid = sol3_query(fMid, fRight);
+			}
+		}
+		return sol3_rec(fRight+1 , right, n);		
+	}
+	
+	public static int sol3_query(int left, int right)  throws Exception {
+		String str = "? "+left+" "+right;
+		System.out.println(str);
+		System.out.flush();
+		return Integer.parseInt(rd.readLine());
+	}
+	public static int sol3_ret(int left, int right) throws Exception {
+		int qr = sol3_query(left, right);
+		return qr == left ? right : left;
 	}
 	
 	public static void solution2() throws Exception {
