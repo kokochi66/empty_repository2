@@ -5,7 +5,7 @@ public class test {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
-		solution();
+		System.out.printf("%.4s", "Welcome, C World");
 	}
 	public static void solution() throws Exception {
 		int TestCase = Integer.parseInt(rd.readLine());
