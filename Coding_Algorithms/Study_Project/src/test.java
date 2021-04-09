@@ -5,13 +5,6 @@ public class test {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
-		System.out.printf("%.4s", "Welcome, C World");
-	}
-	public static void solution() throws Exception {
-		int TestCase = Integer.parseInt(rd.readLine());
-		for(int TT=0;TT<TestCase;TT++) {
-			tok = new StringTokenizer(rd.readLine());
-			int n = Integer.parseInt(tok.nextToken());
-		}
+		
 	}
 }
