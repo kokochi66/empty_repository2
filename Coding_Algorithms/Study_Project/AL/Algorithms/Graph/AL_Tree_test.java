@@ -1,6 +1,10 @@
 package Algorithms.Graph;
 
+import java.util.Arrays;
+
 public class AL_Tree_test {
+	
+	
 	
 	static class Node {
 		int data;
@@ -17,5 +21,12 @@ public class AL_Tree_test {
 			this.right = r;
 		}
 	}
+	
+	static class EdgeTree {
+		
+		public EdgeTree(int size) {
+			
+		}
+	} // 전체 노드의 개수와 에지의 연결부분만이 주어지는 트리
 
 }
