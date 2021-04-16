@@ -5,6 +5,13 @@ public class test {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
+		int[][] arr =  {
+			{1,2},{3,4}
+		};
+		Arrays.sort(arr, (int[] a,int[] b) -> {
+			return 0;
+		});
+		
 	}
 	
 	public static int Pib(int n) throws Exception {
