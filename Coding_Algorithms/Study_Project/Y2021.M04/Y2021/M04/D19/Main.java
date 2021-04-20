@@ -16,12 +16,17 @@ public class Main {
 	}
 	
 	public static int dfs(int n, int len) {
+		if(nd[n].size() <= 1) return 0;
 		int max = len;
-		chk[n] = true;
+		ArrayList<Integer> ed = new ArrayList<Integer>();
+		chk[n] = true; 
 		for(int i=0;i<nd[n].size();i++) {
 			Integer[] c = nd[n].get(i);
-			if(!chk[c[0]]) max = Math.max(max, dfs(c[0], len + c[1]));
+			if(!chk[c[0]]) ed.add(dfs(c[0], len + c[1]));
 		}
+		Collections.sort(ed);
+		max = Math.max(ed.size() > 0 ? ed.get(0) + len : len, ed.size() > 1 ? ed.get(1) + ed.get(0) : 0);
+		System.out.println(n+" "+max);
 		return max;
 	}
 	public static void solution() throws Exception {
@@ -37,15 +42,7 @@ public class Main {
 			nd[a].add(new Integer[] {b,c});
 			nd[b].add(new Integer[] {a,c});
 		} // ÀÔ·ÂºÎ
-		int[] max = new int[nd[1].size()];
-		for(int i=0;i<nd[1].size();i++) {
-			init();
-			chk[1] = true;
-			Integer[] c = nd[1].get(i);
-			max[i] = dfs(c[0], c[1]);
-		}
-		System.out.println(Arrays.toString(max));
-		Arrays.sort(max);
-		System.out.println(max.length >=2 ? max[0]+max[1] : max[0]);
+		int max = dfs(1,0);
+		System.out.println(max);
 	}
 }
