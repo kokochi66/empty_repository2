@@ -22,8 +22,35 @@ public class Main {
 				}
 			}
 		} // ÀÔ·ÂºÎ
-		sol_BFS(kh,kw,2,pan);
-		System.out.println(th+" "+tw+" "+tmin);
+		int stack = 0;
+		int shk = 2;
+		int res = 0;
+		sol_BFS(kh,kw,shk,pan);
+		if(th != -1 && tw != -1)  {
+			res += tmin;
+			pan[th][tw] = 9;
+			pan[kh][kw] = 0;
+			kh = th;
+			kw = tw;
+			stack++;
+		}
+		while(th != -1 && tw != -1) {
+			sol_BFS(kh,kw,shk,pan);
+			if(th != -1 && tw != -1) {
+				res += tmin;
+				pan[th][tw] = 9;
+				pan[kh][kw] = 0;
+				kh = th;
+				kw = tw;
+				stack++;
+				pan[kh][kw] = 0;
+			}
+			if(stack >= shk) {
+				stack = 0;
+				shk++;
+			}
+		}
+		System.out.println(res);
 		
 	}
 	static int th, tw, tmin;
@@ -32,7 +59,6 @@ public class Main {
 		q.add(new Integer[] {ch,cw,0});
 		int n = pan.length;
 		boolean[][] chk = new boolean[n][n];
-		
 		th =-1;
 		tw =-1; 
 		tmin = 1000000000;
