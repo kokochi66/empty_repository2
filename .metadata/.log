@@ -2424,3 +2424,887 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SESSION 2021-07-12 16:17:19.521 -----------------------------------------------
+eclipse.buildId=4.17.0.I20200902-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2021-07-12 16:18:10.216
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.216
+!MESSAGE Commands should really have a category: plug-in='org.springframework.ide.eclipse.boot', id='org.springframework.ide.eclipse.boot.ui.EnableDisableBootDevtools', categoryId='org.springframework.ide.eclipse.boot.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.270
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.add.import'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.organize.imports'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.open.hierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.271
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+
+!ENTRY org.eclipse.ui 2 0 2021-07-12 16:18:10.728
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-07-12 16:18:10.728
+!MESSAGE Commands should really have a category: plug-in='org.springframework.ide.eclipse.boot', id='org.springframework.ide.eclipse.boot.ui.EnableDisableBootDevtools', categoryId='org.springframework.ide.eclipse.boot.commands.category'
+
+!ENTRY org.eclipse.jface 2 0 2021-07-12 16:18:12.946
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-12 16:18:12.946
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@499f9003,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39bd07fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-12 16:18:58.198
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\kokoc'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-07-12 17:04:27.313
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/PyvesB/eclipse-planet-themes/updatesite/content.xml.xz
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-07-12 17:04:28.992
+!MESSAGE No repository found at http://www.pramati.com/downloads/eclipse/updates/.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-07-12 17:04:36.967
+!MESSAGE Connection to http://jope.ow2.org/update/jope/p2.index failed on 알려진 호스트가 없습니다 (jope.ow2.org). Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:932)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1517)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:851)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2021-07-12 17:04:37.182
+!MESSAGE Unknown Host: http://jope.ow2.org/update/jope/content.xml
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:248)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-07-12 17:04:51.024
+!MESSAGE No repository found at http://dl.bintray.com/testng-team/testng-p2-release/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-07-12 17:05:15.868
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/content.xml.xz
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2021-07-12 17:05:29.673
+!MESSAGE Unable to read repository at jar:file:/C:/Users/kokoc/Downloads/tern.repository-1.2.1.zip!/content.xml.
+!STACK 0
+java.nio.file.NoSuchFileException: C:\Users\kokoc\Downloads\tern.repository-1.2.1.zip
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1198)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:701)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:240)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:171)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:347)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:109)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:120)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-07-12 17:05:39.722
+!MESSAGE Connection to http://jope.ow2.org/update/jope/p2.index failed on 알려진 호스트가 없습니다 (jope.ow2.org). Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:932)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1517)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:851)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-07-12 17:05:55.250
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/PyvesB/eclipse-planet-themes/updatesite/artifacts.xml.xz
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-07-12 17:06:06.954
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/artifacts.xml.xz
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-07-12 17:46:45.412
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package D12;
+import java.util.*;
+import java.io.*;
+public class Main {
+	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
+	static StringTokenizer tok;
+	public static void main(String[] args) throws Exception {
+		System.out.println(solution(3,	3, new String[] { "DBA", 
+														  "C*A", 
+														  "CDB" }	)); // ABCD
+		
+//		System.out.println(solution(2,	4, new String[] { "NRYN", 
+//														  "ARYA"}	)); // RYAN
+//		
+//		System.out.println(solution(4,	4, new String[] { ".ZI.", 
+//														  "M.**", 
+//														  "MZU.", 
+//														  ".IU."})); // MUZI
+//		
+//		System.out.println(solution(2,	2, new String[] { "AB", 
+//														  "BA"})); // IMPOSSIBLE
+	}
+	
+    public static String solution(int m, int n, String[] board) {
+    	// 리틀 프렌즈 사천성 (프로그래머스)
+    	// 게임의 목적은 배치된 모든 타일을 제거하는 것, 같은 모양의 타일을 규칙에 따라 제거해준다.
+    	// 두 타일을 제거하는 조건은 다음과 같다.
+    	// 경로의 양 끝은 제거하려는 두 타일임
+    	// 경로는 두 개 이하의 수평/수직 선분으로 구성되어있고, 모두 연결되어있음 (경로가 세개 이하의 선분으로 구성되어 잇어야 함, 경로를 두 번 이하로 꺾을 수 있음)
+    	// 경로 상에는 다른 타일이나 장애물이 없어야 함.
+    	
+    	// 입력값에서 .은 빈칸, *은 장애물(막힌칸), 알파벳 대문자는 각 타일을 나타내며, 같은 타일끼리 제거해주어야한다. 여기서 타일이 없는 입력은 주어지지 않는다.
+    	// 출력에서, 해가 존재하는 경우(모든 타일을 제거할 수 있는 경우), 타일을 제거하는 순서대로 한 글자씩 이루어진 문자열을, 해가 여러가지 인 경우,알파벳 순으로 가장 먼저인 문자열을 리턴한다.
+    	// 해가 존재하지 않으면 IMPOSSIBLE을 리턴한다.
+    	// 보드의 크기 M * N 은 각각 100 이하이다 (n^3 가능)
+    	
+    	// 1. 각 보드에서, 알파벳 순으로 문자의 위치 한 곳을 저장하고 있는 배열을 정렬하여 구성한다.
+    	// 2. 여기서 한 턴 동안 배열을 돌면서 처음부터 끝까지, 너비우선 탐색(BFS)을 이용하여, 해당 문자가 다른 문자와 매치가 가능한 상태인지를 체크한다.
+    	// 3. 만약 매치가 가능하다면, 매치 상태를 체크하며, 해당 문자 두 위치를 빈 공간(.)으로 변경하고, 다시 배열의 처음으로 돌아가 처음부터 반복한다.
+    	// 4. 매치 상태 체크는 check boolean 배열을 이용하여 이미 체크한 값은 다시 체크하지 않도록 해준다.
+    	
+    	char[][] cboard = new char[m][n];
+    	for(int i=0;i<m;i++) cboard[i] = board[i].toCharArray();	// 사용하기 간편하게 char 배열로 변경해줌
+    	
+    	
+    	//1. 배열구성(각 문자는 하나만 체크해야 하므로, 이를 간편하게 연산하기 위해서 HashSet을 이용한다. n^2 연산이 든다.)
+    	HashSet<Character> set = new HashSet<>();
+    	ArrayList<boardPOS> list = new ArrayList<boardPOS>();	// 개수 세는게 어려우므로, 배열이 아닌 리스트로 구현한다.
+    	for(int i=0;i<m;i++) {
+    		for(int j=0;j<n;j++) {
+    			if(cboard[i][j] != '.' && cboard[i][j] != '*' && !set.contains(cboard[i][j])) {
+    				set.add(cboard[i][j]);
+    				list.add(new boardPOS(cboard[i][j], i, j));
+    			}
+    		}
+    	}
+    	Collections.sort(list); // 넣어준 값을 정렬해준다.
+//    	for(int i=0;i<list.size();i++) System.out.println(list.get(i).toString());
+    	
+    	
+    	// 2. 턴을 돌면서, 너비우선탐색을 진행한다.
+    	
+    	
+    	
+        String answer = "";
+        return answer;
+    }
+    
+    public static boolean boardBFS(char[][] board, int ch, int cw, int m, int n) {
+    	// 너비우선 탐색을 진행하면서, 타일간의 거리에서 방향이 두 번 이상 꺾이면 안되며, 중간에 다른 타일이나 장애물이 있어서는 안된다.
+    	// 따라서 방향값을 넣어주고, 방향이 몇번 틀어졌는지에 대한 카운트값도 BFS에 포함되어야 한다.
+    	Queue<Integer[]> q = new LinkedList<>();
+    	boolean[][] check = new boolean[m][n];
+    	char target = board[ch][cw];
+    	
+    	//먼저 초기 이동값에서 target에 도착이 가능하다면, 도착표시를 해준다.
+    	
+    	do()
+    	
+    	// 초기 이동값을 큐에 넣어준다. 큐에 들어가는 값은 각각, ch, cw, cd(현재방향), dcnt(방향카운트) 이다.
+    	if(ch+1 < m && (board[ch+1][cw] == target || board[ch+1][cw] == '.')) q.add(new Integer[] {});
+    	
+    	
+    	return false;
+    }
+    
+    static class boardPOS implements Comparable<boardPOS> {
+    	char tile;
+    	int x, y;
+    	public boardPOS(char t, int x, int y) {
+    		this.tile = t;
+    		this.x = x;
+    		this.y = y;
+    	}
+		@Override
+		public int compareTo(boardPOS o) {
+			return this.tile < o.tile ? -1 : 1;
+		}
+		@Override
+		public String toString() {
+			return "boardPOS [tile=" + tile + ", x=" + x + ", y=" + y + "]";
+		}
+		
+    }
+	
+    public static int solution3(int n, int[][] computers) {
+    	// 각 컴퓨터간 연결관계가 존재하면 서로 연결되어있다고 할 수 있고, 정보를 교환할 수 있다. = 같은 네트워크상에 있다고 할 수 있다
+    	// 연결관계를 확인하여 총 분리된 네트워크가 몇개 존재하는지를 확인한다.
+    	// 컴퓨터 개수인 n 은 200이하임 (3제곱 가능)
+    	// 자기 자신과는 항상 연결되어있다고 표시한다.
+    	
+    	int[] parent = new int[n];	// 각 컴퓨터의 루트값을 체크
+    	for(int i=0;i<n;i++) parent[i] = i; 	// 기본 루트값은 자기 자신으로 설정
+    	
+    	for(int i=0;i<n;i++) {
+    		for(int j=i+1;j<n;j++) {
+    			if(computers[i][j] == 1) {
+    				unip(parent, i, j);
+    			}
+    		}
+    	} // n^2
+    	
+    	
+    	// 각 부모값을 지정해주어서, 얻게된 결과 루트배열을 확인하여, 루트값이 서로 다른 것의 개수를 세면 네트워크의 개수가 된다.
+    	// 간편하게 계산하기 위해서 HashSet을 이용한다.
+    	HashSet<Integer> set = new HashSet<Integer>();
+    	for(int i=0;i<n;i++) {
+    		if(!set.contains(getp(parent, i))) {
+    			set.add(getp(parent, i));
+    		}
+    	}
+    	
+    	System.out.println(Arrays.toString(parent));
+    	
+        return set.size();
+    }
+    public static int getp(int[] p, int x){
+        if(p[x] == x) return x;
+        return p[x] = getp(p,p[x]);
+    }
+    public static void unip(int[] p, int a, int b){
+        a = getp(p, a);
+        b = getp(p, b);
+        if(a<b) p[b] = a;
+        else p[a] = b;
+    }
+	
+    public static int solution2(int[][] jobs) {
+    	// 하드디스크는 한번에 하나의 작업만 수행 가능 -> 가장 일반적인 방법은 요청이 들어온 순서대로 처리
+    	// 작업의 요청부터 종료까지 걸린 시간의 평균을 가장 줄이는 방법으로 처리하면 평균이 얼마가 되는지를 리턴해야한다.
+    	// 가장 요청 수를 줄이는 방법을 찾아야함 -> 모든 방법 고려? -> 시간오버남
+    	// jobs의 길이는 1 이상 500 이하 (제곱 가능)
+    	// 작업을 선택하는 단계와 작업 진행하는 단계가 별도로 나뉘어야함.
+    	// 작업을 선택하는 단계에서, 현재 대기중인 작업 중에서 작업 시간이 가장 짧은 것을 먼저 진행해야함.
+    	// 가장 짧은것을 선택하기 위해서 우선순위큐를 이용함.
+    	
+    	int n = jobs.length, answer = 0;
+    	Arrays.sort(jobs, (a,b) -> a[0] > b[0] ? 1 : -1); // 입력되는 배열을 요청되는 시간 순서대로 정렬한다. log N
+    	
+    	int CurrTime = 0, CurrIndex = 0;
+    	PriorityQueue<Job> pq = new PriorityQueue<Job>();
+    	// 여기서 우선순위 큐에서 작업이 들어간 시간을 넣어줌으로써, 작업의 걸린시간 평균을 계산할 수 있도록 해야함.
+    	
+    	
+    	while(CurrIndex < n || !pq.isEmpty()) {
+    		if(CurrIndex < n) {
+    			// 아직 남아있는 작업이 있다면, 현재 시간을 체크하여, 작업을 큐 안에 넣어줄지를 파악함.
+    			while(CurrIndex < n && jobs[CurrIndex][0] <= CurrTime) {
+    				pq.add(new Job(jobs[CurrIndex][0], jobs[CurrIndex][1]));
+    				CurrIndex++;
+    			}	// 현재 시간 이후라면, 큐에 작업을 넣어준다.
+    			if(pq.isEmpty()) {
+    				// 만약 아직 작업이 더 남아있는데 큐에 작업이 들어가지 않는다면, 시간을 다음 작업의 시간만큼 흐르게 해준다.
+    				CurrTime = jobs[CurrIndex][0];
+    			}
+    		}
+    		
+    		if(!pq.isEmpty()) {
+    			// 큐에 들어온 작업을 하나씩 처리한다. 우선순위 큐에서 현재 대기중인 작업 중 가장 작업 시간이 짧은것을 꺼내서 진행한다.
+    			Job j = pq.poll();
+//    			System.out.println(j.toString());
+    			CurrTime += j.time;
+    			answer += CurrTime - j.start;
+    		}
+    	}
+
+        return answer/n;
+    } 
+    static class Job implements Comparable<Job> {
+    	int start;
+    	int time;
+    	
+    	public Job(int s, int t) {
+    		this.start = s;
+    		this.time = t;
+    	}
+
+		@Override
+		public int compareTo(Job o) {
+			// TODO Auto-generated method stub
+			return this.time < o.time ? -1 : 1;
+		}
+
+		@Override
+		public String toString() {
+			return "Job [start=" + start + ", time=" + time + "]";
+		}
+		
+    }
+    
+}
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2011)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1739)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2956)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:449)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2021-07-12 17:46:45.413
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2011)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1739)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2956)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:449)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2021-07-12 17:46:45.414
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2011)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1739)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2956)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:449)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-07-12 17:46:45.836
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package D12;
+import java.util.*;
+import java.io.*;
+public class Main {
+	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
+	static StringTokenizer tok;
+	public static void main(String[] args) throws Exception {
+		System.out.println(solution(3,	3, new String[] { "DBA", 
+														  "C*A", 
+														  "CDB" }	)); // ABCD
+		
+//		System.out.println(solution(2,	4, new String[] { "NRYN", 
+//														  "ARYA"}	)); // RYAN
+//		
+//		System.out.println(solution(4,	4, new String[] { ".ZI.", 
+//														  "M.**", 
+//														  "MZU.", 
+//														  ".IU."})); // MUZI
+//		
+//		System.out.println(solution(2,	2, new String[] { "AB", 
+//														  "BA"})); // IMPOSSIBLE
+	}
+	
+    public static String solution(int m, int n, String[] board) {
+    	// 리틀 프렌즈 사천성 (프로그래머스)
+    	// 게임의 목적은 배치된 모든 타일을 제거하는 것, 같은 모양의 타일을 규칙에 따라 제거해준다.
+    	// 두 타일을 제거하는 조건은 다음과 같다.
+    	// 경로의 양 끝은 제거하려는 두 타일임
+    	// 경로는 두 개 이하의 수평/수직 선분으로 구성되어있고, 모두 연결되어있음 (경로가 세개 이하의 선분으로 구성되어 잇어야 함, 경로를 두 번 이하로 꺾을 수 있음)
+    	// 경로 상에는 다른 타일이나 장애물이 없어야 함.
+    	
+    	// 입력값에서 .은 빈칸, *은 장애물(막힌칸), 알파벳 대문자는 각 타일을 나타내며, 같은 타일끼리 제거해주어야한다. 여기서 타일이 없는 입력은 주어지지 않는다.
+    	// 출력에서, 해가 존재하는 경우(모든 타일을 제거할 수 있는 경우), 타일을 제거하는 순서대로 한 글자씩 이루어진 문자열을, 해가 여러가지 인 경우,알파벳 순으로 가장 먼저인 문자열을 리턴한다.
+    	// 해가 존재하지 않으면 IMPOSSIBLE을 리턴한다.
+    	// 보드의 크기 M * N 은 각각 100 이하이다 (n^3 가능)
+    	
+    	// 1. 각 보드에서, 알파벳 순으로 문자의 위치 한 곳을 저장하고 있는 배열을 정렬하여 구성한다.
+    	// 2. 여기서 한 턴 동안 배열을 돌면서 처음부터 끝까지, 너비우선 탐색(BFS)을 이용하여, 해당 문자가 다른 문자와 매치가 가능한 상태인지를 체크한다.
+    	// 3. 만약 매치가 가능하다면, 매치 상태를 체크하며, 해당 문자 두 위치를 빈 공간(.)으로 변경하고, 다시 배열의 처음으로 돌아가 처음부터 반복한다.
+    	// 4. 매치 상태 체크는 check boolean 배열을 이용하여 이미 체크한 값은 다시 체크하지 않도록 해준다.
+    	
+    	char[][] cboard = new char[m][n];
+    	for(int i=0;i<m;i++) cboard[i] = board[i].toCharArray();	// 사용하기 간편하게 char 배열로 변경해줌
+    	
+    	
+    	//1. 배열구성(각 문자는 하나만 체크해야 하므로, 이를 간편하게 연산하기 위해서 HashSet을 이용한다. n^2 연산이 든다.)
+    	HashSet<Character> set = new HashSet<>();
+    	ArrayList<boardPOS> list = new ArrayList<boardPOS>();	// 개수 세는게 어려우므로, 배열이 아닌 리스트로 구현한다.
+    	for(int i=0;i<m;i++) {
+    		for(int j=0;j<n;j++) {
+    			if(cboard[i][j] != '.' && cboard[i][j] != '*' && !set.contains(cboard[i][j])) {
+    				set.add(cboard[i][j]);
+    				list.add(new boardPOS(cboard[i][j], i, j));
+    			}
+    		}
+    	}
+    	Collections.sort(list); // 넣어준 값을 정렬해준다.
+//    	for(int i=0;i<list.size();i++) System.out.println(list.get(i).toString());
+    	
+    	
+    	// 2. 턴을 돌면서, 너비우선탐색을 진행한다.
+    	
+    	
+    	
+        String answer = "";
+        return answer;
+    }
+    
+    public static boolean boardBFS(char[][] board, int ch, int cw, int m, int n) {
+    	// 너비우선 탐색을 진행하면서, 타일간의 거리에서 방향이 두 번 이상 꺾이면 안되며, 중간에 다른 타일이나 장애물이 있어서는 안된다.
+    	// 따라서 방향값을 넣어주고, 방향이 몇번 틀어졌는지에 대한 카운트값도 BFS에 포함되어야 한다.
+    	Queue<Integer[]> q = new LinkedList<>();
+    	boolean[][] check = new boolean[m][n];
+    	char target = board[ch][cw];
+    	
+    	//먼저 초기 이동값에서 target에 도착이 가능하다면, 도착표시를 해준다.
+    	
+    	do()
+    	
+    	// 초기 이동값을 큐에 넣어준다. 큐에 들어가는 값은 각각, ch, cw, cd(현재방향), dcnt(방향카운트) 이다.
+    	if(ch+1 < m && (board[ch+1][cw] == target || board[ch+1][cw] == '.')) q.add(new Integer[] {});
+    	
+    	
+    	return false;
+    }
+    
+    static class boardPOS implements Comparable<boardPOS> {
+    	char tile;
+    	int x, y;
+    	public boardPOS(char t, int x, int y) {
+    		this.tile = t;
+    		this.x = x;
+    		this.y = y;
+    	}
+		@Override
+		public int compareTo(boardPOS o) {
+			return this.tile < o.tile ? -1 : 1;
+		}
+		@Override
+		public String toString() {
+			return "boardPOS [tile=" + tile + ", x=" + x + ", y=" + y + "]";
+		}
+		
+    }
+	
+    public static int solution3(int n, int[][] computers) {
+    	// 각 컴퓨터간 연결관계가 존재하면 서로 연결되어있다고 할 수 있고, 정보를 교환할 수 있다. = 같은 네트워크상에 있다고 할 수 있다
+    	// 연결관계를 확인하여 총 분리된 네트워크가 몇개 존재하는지를 확인한다.
+    	// 컴퓨터 개수인 n 은 200이하임 (3제곱 가능)
+    	// 자기 자신과는 항상 연결되어있다고 표시한다.
+    	
+    	int[] parent = new int[n];	// 각 컴퓨터의 루트값을 체크
+    	for(int i=0;i<n;i++) parent[i] = i; 	// 기본 루트값은 자기 자신으로 설정
+    	
+    	for(int i=0;i<n;i++) {
+    		for(int j=i+1;j<n;j++) {
+    			if(computers[i][j] == 1) {
+    				unip(parent, i, j);
+    			}
+    		}
+    	} // n^2
+    	
+    	
+    	// 각 부모값을 지정해주어서, 얻게된 결과 루트배열을 확인하여, 루트값이 서로 다른 것의 개수를 세면 네트워크의 개수가 된다.
+    	// 간편하게 계산하기 위해서 HashSet을 이용한다.
+    	HashSet<Integer> set = new HashSet<Integer>();
+    	for(int i=0;i<n;i++) {
+    		if(!set.contains(getp(parent, i))) {
+    			set.add(getp(parent, i));
+    		}
+    	}
+    	
+    	System.out.println(Arrays.toString(parent));
+    	
+        return set.size();
+    }
+    public static int getp(int[] p, int x){
+        if(p[x] == x) return x;
+        return p[x] = getp(p,p[x]);
+    }
+    public static void unip(int[] p, int a, int b){
+        a = getp(p, a);
+        b = getp(p, b);
+        if(a<b) p[b] = a;
+        else p[a] = b;
+    }
+	
+    public static int solution2(int[][] jobs) {
+    	// 하드디스크는 한번에 하나의 작업만 수행 가능 -> 가장 일반적인 방법은 요청이 들어온 순서대로 처리
+    	// 작업의 요청부터 종료까지 걸린 시간의 평균을 가장 줄이는 방법으로 처리하면 평균이 얼마가 되는지를 리턴해야한다.
+    	// 가장 요청 수를 줄이는 방법을 찾아야함 -> 모든 방법 고려? -> 시간오버남
+    	// jobs의 길이는 1 이상 500 이하 (제곱 가능)
+    	// 작업을 선택하는 단계와 작업 진행하는 단계가 별도로 나뉘어야함.
+    	// 작업을 선택하는 단계에서, 현재 대기중인 작업 중에서 작업 시간이 가장 짧은 것을 먼저 진행해야함.
+    	// 가장 짧은것을 선택하기 위해서 우선순위큐를 이용함.
+    	
+    	int n = jobs.length, answer = 0;
+    	Arrays.sort(jobs, (a,b) -> a[0] > b[0] ? 1 : -1); // 입력되는 배열을 요청되는 시간 순서대로 정렬한다. log N
+    	
+    	int CurrTime = 0, CurrIndex = 0;
+    	PriorityQueue<Job> pq = new PriorityQueue<Job>();
+    	// 여기서 우선순위 큐에서 작업이 들어간 시간을 넣어줌으로써, 작업의 걸린시간 평균을 계산할 수 있도록 해야함.
+    	
+    	
+    	while(CurrIndex < n || !pq.isEmpty()) {
+    		if(CurrIndex < n) {
+    			// 아직 남아있는 작업이 있다면, 현재 시간을 체크하여, 작업을 큐 안에 넣어줄지를 파악함.
+    			while(CurrIndex < n && jobs[CurrIndex][0] <= CurrTime) {
+    				pq.add(new Job(jobs[CurrIndex][0], jobs[CurrIndex][1]));
+    				CurrIndex++;
+    			}	// 현재 시간 이후라면, 큐에 작업을 넣어준다.
+    			if(pq.isEmpty()) {
+    				// 만약 아직 작업이 더 남아있는데 큐에 작업이 들어가지 않는다면, 시간을 다음 작업의 시간만큼 흐르게 해준다.
+    				CurrTime = jobs[CurrIndex][0];
+    			}
+    		}
+    		
+    		if(!pq.isEmpty()) {
+    			// 큐에 들어온 작업을 하나씩 처리한다. 우선순위 큐에서 현재 대기중인 작업 중 가장 작업 시간이 짧은것을 꺼내서 진행한다.
+    			Job j = pq.poll();
+//    			System.out.println(j.toString());
+    			CurrTime += j.time;
+    			answer += CurrTime - j.start;
+    		}
+    	}
+
+        return answer/n;
+    } 
+    static class Job implements Comparable<Job> {
+    	int start;
+    	int time;
+    	
+    	public Job(int s, int t) {
+    		this.start = s;
+    		this.time = t;
+    	}
+
+		@Override
+		public int compareTo(Job o) {
+			// TODO Auto-generated method stub
+			return this.time < o.time ? -1 : 1;
+		}
+
+		@Override
+		public String toString() {
+			return "Job [start=" + start + ", time=" + time + "]";
+		}
+		
+    }
+    
+}
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2011)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1739)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2956)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:152)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2021-07-12 17:46:45.836
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2011)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1739)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2956)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:152)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2021-07-12 17:46:45.837
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2011)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1739)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2956)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:152)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
