@@ -6,9 +6,9 @@ public class Main {
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
-//		System.out.println(solution(3,	3, new String[] { "DBA", 
-//														  "C*A", 
-//														  "CDB" }	)); // ABCD
+		System.out.println(solution(3,	3, new String[] { "DBA", 
+														  "C*A", 
+														  "CDB" }	)); // ABCD
 		
 //		System.out.println(solution(2,	4, new String[] { "NRYN", 
 //														  "ARYA"}	)); // RYAN
@@ -63,14 +63,14 @@ public class Main {
     	for(int k=0;k<list.size();k++) {
         	for(int i=0;i<list.size();i++) {
         		if(check[i]) continue;
-        		System.out.println(list.get(i).tile);
+//        		System.out.println(list.get(i).tile);
         		if(boardBFS(list.get(i).h, list.get(i).w)) {
 //        			System.out.println(list.get(i).tile);
         			cboard[list.get(i).h][list.get(i).w] = '.';
         			check[i] = true;
         			checkCnt++;
         			answer += list.get(i).tile;
-        			for(int q=0;q<m;q++) System.out.println(Arrays.toString(cboard[q]));
+//        			for(int q=0;q<m;q++) System.out.println(Arrays.toString(cboard[q]));
         			break;
         			// 3. 매치되었다면, 해당 공간 '.'으로 변경 후, 리스트의 처음부터 다시 반복한다.
         		}
@@ -85,29 +85,31 @@ public class Main {
     public static boolean boardBFS(int ch, int cw) {
     	// 너비우선 탐색을 진행하면서, 타일간의 거리에서 방향이 두 번 이상 꺾이면 안되며, 중간에 다른 타일이나 장애물이 있어서는 안된다.
     	// 따라서 방향값을 넣어주고, 방향이 몇번 틀어졌는지에 대한 카운트값도 BFS에 포함되어야 한다.
-    	Queue<Integer[]> q = new LinkedList<>();
-    	boolean[][] check = new boolean[tm][tn];
-    	check[ch][cw] = true;
+    	// 각 방향에서 겹치는 부분이 있으면 결과값이 달라지므로, 방향마다 별도로 계산해주기 위해서 반복문을 돌린다.
+    	// 계산 편의를 위해서 반복문에 맞게 배열을 생성한다.
+    	
+    	int[][] op = { {1,0}, {-1,0}, {0,1}, {0,-1} };
     	char target = cboard[ch][cw];
     	
-    	
-    	// 초기 이동값을 큐에 넣어준다. 큐에 들어가는 값은 각각, ch, cw, cd(현재방향), dcnt(방향카운트) 이다.
-    	// 방향은 0(down), 1(up), 2(right), 3(left) 이다.
-    	if(findTarget(ch+1, cw, 0, 0, target, q, check)) return true;
-    	if(findTarget(ch-1, cw, 1, 0, target, q, check)) return true;
-    	if(findTarget(ch, cw+1, 2, 0, target, q, check)) return true;
-    	if(findTarget(ch, cw-1, 3, 0, target, q, check)) return true;
-    	
-    	
-    	while(!q.isEmpty()) {
-    		Integer[] c = q.poll();
-    		System.out.println(Arrays.toString(c));
-    		
-        	if(findTarget(c[0]+1, c[1], 0, c[2] == 0 ? c[3] : c[3]+1, target, q, check)) return true;
-        	if(findTarget(c[0]-1, c[1], 1, c[2] == 1 ? c[3] : c[3]+1, target, q, check)) return true;
-        	if(findTarget(c[0], c[1]+1, 2, c[2] == 2 ? c[3] : c[3]+1, target, q, check)) return true;
-        	if(findTarget(c[0], c[1]-1, 3, c[2] == 3 ? c[3] : c[3]+1, target, q, check)) return true;
+    	for(int i=0;i<4;i++) {
+        	Queue<Integer[]> q = new LinkedList<>();
+        	boolean[][] check = new boolean[tm][tn];
+        	check[ch][cw] = true;
+        	
+        	// 초기 이동값을 큐에 넣어준다. 큐에 들어가는 값은 각각, ch, cw, cd(현재방향), dcnt(방향카운트) 이다.
+        	// 방향은 0(down), 1(up), 2(right), 3(left) 이다.
+        	if(findTarget(ch + op[i][0], cw + op[i][1], i, 0, target, q, check)) return true;
+        	
+        	while(!q.isEmpty()) {
+        		Integer[] c = q.poll();
+//        		System.out.println(Arrays.toString(c));
+        		
+        		for(int j=0;j<4;j++) {
+        			if(findTarget(c[0] + op[j][0], c[1] + op[j][1], j, c[2] == j ? c[3] : c[3]+1, target, q, check)) return true;
+        		}
+        	}
     	}
+
     	
     	
     	return false;
