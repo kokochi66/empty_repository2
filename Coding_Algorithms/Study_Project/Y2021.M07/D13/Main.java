@@ -7,14 +7,15 @@ public class Main {
 	static StringTokenizer tok;
 	public static void main(String[] args) throws Exception {
 		
-//		StringBuffer str = new StringBuffer("aAbAbAbAa");
-		System.out.println("res = "+ solution("aAAAAa"));
-//		System.out.println(remove_one(str,'b', 3) +" "+str);
+		System.out.println("res = " + solution("aAbAbAbAa"));
 		
 //		System.out.println(solution("gHaEaLaLaOgbWORLDb"));
 //		System.out.println(solution("SpIpGpOpNpGaJqOqAa"));
 //		System.out.println(solution("AxAxAxAoBoBoB"));
 	}
+	
+	static boolean[] checkArr;
+	static ArrayList<String> words;
 	public static String solution(String sentence) {
 		// 프로그래머스 브라이언의 고민 문제
 		// 신고받은 글이 광고글인지를 운영자가 판단하여 차단, 
@@ -39,8 +40,9 @@ public class Main {
 			}
 		} // map으로 각각 개수세기.
 		
-		ArrayList<String> words = new ArrayList<>();
-		// 출력되는 단어를 넣을 리스트
+		words = new ArrayList<>();
+		checkArr = new boolean[str.length()];
+		// 출력되는 단어를 넣을 리스트와 체크배열
 		
 		Iterator<Character> iter = map.keySet().iterator();
 		while(iter.hasNext()) {
@@ -49,21 +51,22 @@ public class Main {
 			if(cnt >=3 || cnt == 1) {
 				// 첫번째 조건 처리
 				map.remove(key);
-				int finalIdx = remove_one(str, key, cnt);
-				if(finalIdx == -1 || hasLower(str.substring(finalIdx-cnt, finalIdx+1))) return "invalid";
+				int finalIdx = check_one(str, key, cnt);
+				System.out.println("finalIdx = " + finalIdx+" "+str+" "+str.substring(finalIdx-(cnt*2), finalIdx+1));
+				if(finalIdx == -1 || hasLower(str.substring(finalIdx-(cnt*2), finalIdx+1), key)) return "invalid";
 				// 첫번째 조건을 처리하면서 만약, 첫번째 조건을 처리하였는데 맨 앞뒤에 소문자가 붙은 것 이외에 다른 소문자가 아직 존재한다면, invalid를 출력해야한다.
 				// 혹은 함수에서 올바르지 않은 처리방식이 존재하면 finalIdx가 -1이 된다. 이 경우에도 invalid를 출력한다.
 				
-				if(finalIdx-cnt-1 >= 0 && finalIdx+1 < str.length() && str.charAt(finalIdx-cnt-1) == str.charAt(finalIdx+1) 
+				if(finalIdx-(cnt*2)-1 >= 0 && finalIdx+1 < str.length() && str.charAt(finalIdx-(cnt*2)-1) == str.charAt(finalIdx+1) 
 						&& isLower(str.charAt(finalIdx+1)) && map.get(str.charAt(finalIdx+1)) == 2) {
 					map.remove(str.charAt(finalIdx+1));
-					finalIdx = remove_two(str, str.charAt(finalIdx+1));
+					Arrays.fill(checkArr, finalIdx-(cnt*2)-1, finalIdx+2, true);
 				}
+				else Arrays.fill(checkArr, finalIdx-(cnt*2), finalIdx+1, true);
 				// 맨 앞과 맨 뒤에 소문자가 붙어있으며, 해당 소문자의 개수가 두개라면, 두번째 조건으로 처리해준다.
 				// 맨 앞이나 맨 뒤에 소문자가 하나만 붙은 경우에는 그냥 무시한다.
 				
-				words.add(str.substring(finalIdx-cnt, finalIdx+1));
-				str.delete(finalIdx-cnt, finalIdx+1);
+				addWord(str.substring(finalIdx-(cnt*2), finalIdx+1));
 			}
 		}
 		
@@ -84,6 +87,8 @@ public class Main {
 			System.out.println(words.get(i));
 		}
 		
+		System.out.println(Arrays.toString(checkArr));
+		
 	    return str.toString();
     }
 	
@@ -91,35 +96,53 @@ public class Main {
 		if(c >= 'a' && c <= 'z') return true;
 		return false;
 	}
-	public static boolean hasLower(String str) {
+	public static boolean hasLower(String str, char c) {
 		for(int i=0;i<str.length();i++) {
-			if(isLower(str.charAt(i))) return true;
+			if(isLower(str.charAt(i)) && str.charAt(i) != c) return true;
 		}
 		return false;
 	}
 	
-	public static int remove_one(StringBuffer str, char c, int count) {
-		int finalidx = str.indexOf(Character.toString(c));
-		if(finalidx == 0 ) return -1; 
+	public static int check_one(StringBuffer str, char c, int count) {
+		int startidx = str.indexOf(Character.toString(c));
+		int finalidx = startidx;
+		if(finalidx == 0) return -1; 
 		
 		for(int i=0;i<count;i++) {
-			if(str.charAt(finalidx) == c) {
-				if(finalidx == str.length()-1) return -1;
-				str.deleteCharAt(finalidx);
-				finalidx += 1;
-			} else return -1;
+			if(finalidx >= str.length()-1 || str.charAt(finalidx) != c) return -1;
+			else finalidx += 2;
 		}
+		finalidx--;
+		if(!check_arr(startidx, finalidx)) return -1;
 		
-		return finalidx-1;
+		return finalidx;
 	}
 	
-	public static int remove_two(StringBuffer str, char c) {
+	public static int check_two(StringBuffer str, char c) {
 		int finalidx = str.indexOf(Character.toString(c));
 		str.deleteCharAt(finalidx);
 		finalidx = str.indexOf(Character.toString(c));
 		str.deleteCharAt(finalidx);
 		
 		return finalidx-1;
+	}
+	
+	public static void addWord(String strs) {
+		StringBuffer str = new StringBuffer(strs);
+		for(int i=0;i<str.length();i++) {
+			if(isLower(str.charAt(i))) {
+				str.deleteCharAt(i);
+				i--;
+			}
+		}
+		words.add(str.toString());
+	}
+	
+	public static boolean check_arr(int start, int end) {
+		for(int i=start;i<end;i++) {
+			if(checkArr[i]) return false;
+		}
+		return true;
 	}
 
 	
