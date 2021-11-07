@@ -8,4 +8,4 @@ TrainingSample for kokochi
 * Python
 * C++
 
-기본적으로 코드포스 문제를 풉니다.
+기본적으로 백준 문제를 풉니다.

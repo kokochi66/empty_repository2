@@ -289,9 +289,9 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.src.Main.Main.invokeFramework(src.Main.Main.java:657)
+	at org.eclipse.equinox.launcher.src.Main.Main.basicRun(src.Main.Main.java:594)
+	at org.eclipse.equinox.launcher.src.Main.Main.run(src.Main.Main.java:1465)
 
 !ENTRY org.eclipse.jface 4 2 2021-06-22 01:36:40.458
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
@@ -357,9 +357,9 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.src.Main.Main.invokeFramework(src.Main.Main.java:657)
+	at org.eclipse.equinox.launcher.src.Main.Main.basicRun(src.Main.Main.java:594)
+	at org.eclipse.equinox.launcher.src.Main.Main.run(src.Main.Main.java:1465)
 
 !ENTRY org.eclipse.jface 4 2 2021-06-22 01:36:40.702
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
@@ -425,9 +425,9 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.src.Main.Main.invokeFramework(src.Main.Main.java:657)
+	at org.eclipse.equinox.launcher.src.Main.Main.basicRun(src.Main.Main.java:594)
+	at org.eclipse.equinox.launcher.src.Main.Main.run(src.Main.Main.java:1465)
 
 !ENTRY org.eclipse.jface 4 2 2021-06-22 01:36:40.744
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
@@ -493,9 +493,9 @@ java.lang.IllegalArgumentException: Path must include project and resource name:
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.src.Main.Main.invokeFramework(src.Main.Main.java:657)
+	at org.eclipse.equinox.launcher.src.Main.Main.basicRun(src.Main.Main.java:594)
+	at org.eclipse.equinox.launcher.src.Main.Main.run(src.Main.Main.java:1465)
 
 !ENTRY org.eclipse.equinox.p2.repository 2 0 2021-06-22 01:36:43.284
 !MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/PyvesB/eclipse-planet-themes/updatesite/content.xml.xz
@@ -2250,7 +2250,7 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org
 package D11;
 import java.util.*;
 import java.io.*;
-public class Main {
+public class src.Main.Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
@@ -2668,7 +2668,7 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org
 package D12;
 import java.util.*;
 import java.io.*;
-public class Main {
+public class src.Main.Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
@@ -3005,7 +3005,7 @@ java.lang.IllegalArgumentException
 package D12;
 import java.util.*;
 import java.io.*;
-public class Main {
+public class src.Main.Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
@@ -4263,7 +4263,7 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org
 package D14;
 import java.util.*;
 import java.io.*;
-public class Main {
+public class src.Main.Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
@@ -4520,7 +4520,7 @@ java.lang.IllegalArgumentException
 package D14;
 import java.util.*;
 import java.io.*;
-public class Main {
+public class src.Main.Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
@@ -4753,7 +4753,7 @@ java.lang.IllegalArgumentException
 package D14;
 import java.util.*;
 import java.io.*;
-public class Main {
+public class src.Main.Main {
 	static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer tok;
