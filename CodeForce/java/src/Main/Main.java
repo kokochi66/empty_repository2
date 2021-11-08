@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -16,60 +14,156 @@ public class Main {
     public static void main(String[] args) throws Exception {
         solution();
     }
-    static Double min;
+
     public static void solution() throws Exception {
-        // https://www.acmicpc.net/problem/1007 벡터매칭
-        int tt = Integer.parseInt(rd.readLine());
-        for(int TestCase = 0 ; TestCase < tt; TestCase++) {
-            int n = Integer.parseInt(rd.readLine());
-            int[][] input = new int[n][2];
-            for(int i=0;i<n;i++) {
-                tok = new StringTokenizer(rd.readLine());
-                input[i][0] = Integer.parseInt(tok.nextToken());
-                input[i][1] = Integer.parseInt(tok.nextToken());
+        // https://www.acmicpc.net/problem/1033 백준 칵테일
+        int n = Integer.parseInt(rd.readLine());
+        calRatio[] arr = new calRatio[n];
+        for(int i=0;i<n-1;i++) {
+            tok = new StringTokenizer(rd.readLine());
+            int a = Integer.parseInt(tok.nextToken());
+            int b = Integer.parseInt(tok.nextToken());
+            long aPer = Integer.parseInt(tok.nextToken());
+            long bPer = Integer.parseInt(tok.nextToken());
+
+            calRatio aRatio = new calRatio();
+            calRatio bRatio = new calRatio();
+            aRatio.setRoot(aPer);
+            aRatio.setCal(bRatio);
+            bRatio.setRoot(bPer);
+            bRatio.setCal(aRatio);
+
+            if(arr[a] == null) arr[a] = aRatio;
+            else {
+                long lcm = lcm(arr[a].root, aRatio.root);
+                aRatio.cycle = true;
+                calRatio cRatio = aRatio.cal;
+                while(!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root  * (lcm / aRatio.root));
+                    if(cRatio.cal.cycle) {
+                        cRatio.cal = arr[a];
+                        break;
+                    }
+                    cRatio = cRatio.cal;
+                }
+                aRatio.cycle = false;
+                aRatio.root = lcm;
+
+
+                arr[a].cycle = true;
+                cRatio = arr[a].cal;
+                while(!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root  * (lcm / arr[a].root));
+                    if(cRatio.cal.cycle) {
+                        cRatio.cal = aRatio.cal;
+                        break;
+                    }
+                    cRatio = cRatio.cal;
+                }
+                arr[a].cycle = false;
+                arr[a].root = lcm;
             }
-            int[] arrN = new int[n/2];
-            boolean[] checkN = new boolean[n];
-            long[] sum = new long[2];
-            min = null;
-            btk(0, 0, checkN, sum, input, arrN);
-            wr.write(min+"");
-            wr.newLine();
+//            wr.write("A :: " + Arrays.toString(arr));
+//            wr.newLine();
+            if(arr[b] == null) arr[b] = bRatio;
+            else {
+                long lcm = lcm(arr[b].root, bRatio.root);
+                bRatio.cycle = true;
+                calRatio cRatio = bRatio.cal;
+                while(!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root  * (lcm / bRatio.root));
+                    if(cRatio.cal.cycle) {
+                        cRatio.cal = arr[b];
+                        break;
+                    }
+                    cRatio = cRatio.cal;
+                }
+                bRatio.cycle = false;
+                bRatio.root = lcm;
+
+                arr[b].cycle = true;
+                cRatio = arr[b].cal;
+                while(!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root  * (lcm / arr[b].root));
+                    if(cRatio.cal.cycle) {
+                        cRatio.cal = bRatio.cal;
+                        break;
+                    }
+                    cRatio = cRatio.cal;
+                }
+                arr[b].cycle = false;
+                arr[b].setRoot(lcm);
+            }
+//            wr.write("B :: " + Arrays.toString(arr));
+//            wr.newLine();
+//            wr.flush();
         }
+
+        long gcd = gcdN(arr);
+        for(int i=0;i<arr.length;i++) {
+            arr[i].root /= gcd;
+        }
+        for (calRatio c : arr) {
+            wr.write(c.root+" ");
+        }
+        wr.newLine();
         wr.flush();
-        wr.close();
     }
-    static HashSet<String> set = new HashSet<>();
 
-    public static void btk(int k, int c, boolean[] checkN, long[] sum, int[][] input, int[] arrN) {
-//        System.out.println("TEST :: k = " + k +" "+ Arrays.toString(sum) +" "+ arrN.length+" "+min);
-        if(k >= checkN.length/2) {
-//            System.out.println("TEST :: " + Arrays.toString(arrN) );
-            long sumx = sum[0];
-            long sumy = sum[1];
-            for(int i=0;i<checkN.length;i++) {
-                if(!checkN[i]) {
-                    sumx -= input[i][0];
-                    sumy -= input[i][1];
-                }
-            }
-            if(min == null) min = Math.sqrt( (sumx*sumx) + (sumy*sumy) );
-            else if(min > Math.sqrt( (sumx*sumx) + (sumy*sumy) )) min = Math.sqrt( (sumx*sumx) + (sumy*sumy) );
-        } else {
-            for(int i=c;i<checkN.length;i++) {
-                if(!checkN[i]) {
-                    checkN[i] = true;
-                    sum[0] += input[i][0];
-                    sum[1] += input[i][1];
-                    arrN[k] = i;
-                    btk(k+1, i+1, checkN, sum, input, arrN);
-                    sum[0] -= input[i][0];
-                    sum[1] -= input[i][1];
-                    checkN[i] = false;
-                }
-            }
+    static class calRatio {
+        long root;
+        calRatio cal;
+        boolean cycle;
+        calRatio() {}
 
+        public void setRoot(long root) {
+            this.root = root;
+        }
+        public void setCal(calRatio cal) {
+            this.cal = cal;
+        }
+
+        public void setCycle(boolean cycle) {
+            this.cycle = cycle;
+        }
+
+        @Override
+        public String toString() {
+            return this.root+"";
         }
     }
 
+    // 최대 공약수
+    public static long gcd(long a, long b) {
+        while(b!= 0) {
+            long r = a%b;
+            a = b;
+            b = r;
+        }
+        return a;
+    }
+
+    // 최소 공배수
+    public static long lcm(long a, long b) {
+        return (a * b) / gcd(a,b);
+    }
+
+    // n개의 최대공약수 = 유클리드 호제법
+    public static long gcdN(calRatio[] arr) {
+        long result = arr[0].root;
+        for(int i=1;i<arr.length;i++) {
+            result = gcd(arr[i].root, result);
+            if(result == 1) return 1;
+        }
+        return result;
+    }
+
+    // n개의 최소공배수
+    public static long lcmN(calRatio[] arr) {
+        long result = 1;
+        for (calRatio i : arr) {
+            result *= i.root;
+        }
+        return result / gcdN(arr);
+    }
 }
