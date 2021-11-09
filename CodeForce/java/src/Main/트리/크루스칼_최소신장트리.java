@@ -1,20 +1,27 @@
+package src.Main.트리;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.StringTokenizer;
 
-public class AL_Kruskal_test {
+public class 크루스칼_최소신장트리 {
     static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;
     public static void main(String[] args) throws Exception {
         int[][] a = {
-            {-1,67,-1,28,17,-1,12},
-            {67,-1,-1,24,62,-1,-1},
-            {-1,-1,-1,-1,20,37,-1},
-            {28,24,-1,-1,-1,-1,13},
-            {17,62,20,-1,-1,45,73},
-            {-1,-1,37,-1,45,-1,-1},
-            {12,-1,-1,13,73,-1,-1}
+                {-1,67,-1,28,17,-1,12},
+                {67,-1,-1,24,62,-1,-1},
+                {-1,-1,-1,-1,20,37,-1},
+                {28,24,-1,-1,-1,-1,13},
+                {17,62,20,-1,-1,45,73},
+                {-1,-1,37,-1,45,-1,-1},
+                {12,-1,-1,13,73,-1,-1}
         };
         Kruskal2(a);
     }
