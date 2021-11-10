@@ -1,6 +1,6 @@
-package Main;
+package src.Main.수학;
 
-public class 최소공배수와_최대공약수 {
+public class 최소공배수_최대공약수 {
     public static void main(String[] args) {
         long[] arr = {360,120,378,504};
         System.out.println(gcd(3,5));
