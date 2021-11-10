@@ -22,18 +22,18 @@ public class 다익스트라_최단경로 {
 //		for(int i=0;i<6;i++) {
 //			System.out.println(Arrays.toString(djk.graph[i]));
 //		}
-        다익스트라_우선순위큐 djk = new 다익스트라_우선순위큐(6);
-        djk.양방향에지추가(0, 1, 2);
-        djk.양방향에지추가(0, 2, 5);
-        djk.양방향에지추가(0, 3, 1);
-        djk.양방향에지추가(1, 2, 3);
-        djk.양방향에지추가(1, 3, 2);
-        djk.양방향에지추가(2, 3, 3);
-        djk.양방향에지추가(2, 4, 1);
-        djk.양방향에지추가(2, 5, 5);
-        djk.양방향에지추가(3, 4, 1);
-        djk.양방향에지추가(4, 5, 2);
-        djk.로테이션(0);
+        Dikstra_prq djk = new Dikstra_prq(6);
+        djk.putEdge(0, 1, 2);
+        djk.putEdge(0, 2, 5);
+        djk.putEdge(0, 3, 1);
+        djk.putEdge(1, 2, 3);
+        djk.putEdge(1, 3, 2);
+        djk.putEdge(2, 3, 3);
+        djk.putEdge(2, 4, 1);
+        djk.putEdge(2, 5, 5);
+        djk.putEdge(3, 4, 1);
+        djk.putEdge(4, 5, 2);
+        djk.rot(0);
         System.out.println(Arrays.toString(djk.res));
     }
 
@@ -82,7 +82,7 @@ public class 다익스트라_최단경로 {
 
     }
 
-    static class 다익스트라_우선순위큐 {
+    static class Dikstra_prq {
         final int INF = 1000000000;
         List<Edge>[] grp;
         int[] res;
@@ -99,22 +99,22 @@ public class 다익스트라_최단경로 {
             }
         }
 
-        public 다익스트라_우선순위큐(int v) {
+        public Dikstra_prq(int v) {
             grp = new ArrayList[v];
             res = new int[v];
             visited = new boolean[v];
             for(int i=0;i<v;i++) grp[i] = new ArrayList<>();
         }
 
-        public void 양방향에지추가(int a, int b, int w) {
+        public void putEdge(int a, int b, int w) {
             grp[a].add(new Edge(b, w));
             grp[b].add(new Edge(a,w));
         }
-        public void 개별에지추가(int a, int b, int w) {
+        public void putSingle(int a, int b, int w) {
             grp[a].add(new Edge(b,w));
         }
 
-        public void 로테이션(int start) {
+        public void rot(int start) {
             PriorityQueue<Edge> pq = new PriorityQueue<>();
             Arrays.fill(visited, false);
             Arrays.fill(res, INF);

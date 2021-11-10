@@ -26,40 +26,40 @@ public class 프림_최소신장트리 {
             arr[a-1][b-1] = c;
             arr[b-1][a-1] = c;
         }
-        int res = 프림알고리즘(arr,0);
+        int res = Prim(arr,0);
         System.out.println(res);
     }
 
     static int INF = 1000000000;
-    public static int 프림알고리즘(int[][] arr, int root) throws Exception {
-        PriorityQueue<트리노드> pq = new PriorityQueue<트리노드>();
+    public static int Prim(int[][] arr, int root) throws Exception {
+        PriorityQueue<TreeNode> pq = new PriorityQueue<TreeNode>();
         int n = arr.length;
         int sum = 0;
         boolean[] chk = new boolean[n];
         chk[root] = true;
         for(int i=0;i<n;i++) {
-            if(arr[root][i] < INF) pq.add(new 트리노드(root, i, arr[root][i]));
+            if(arr[root][i] < INF) pq.add(new TreeNode(root, i, arr[root][i]));
         }
         while(!pq.isEmpty()) {
-            트리노드 tc = pq.poll();
+            TreeNode tc = pq.poll();
             if(chk[tc.end]) continue;
             sum += tc.weight;
             chk[tc.end] = true;
             for(int i=0;i<n;i++) {
-                if(arr[tc.end][i] < INF && !chk[i]) pq.add(new 트리노드(tc.end, i, arr[tc.end][i]));
+                if(arr[tc.end][i] < INF && !chk[i]) pq.add(new TreeNode(tc.end, i, arr[tc.end][i]));
             }
         }
         return sum;
     }
-    static class 트리노드 implements Comparable<트리노드> {
+    static class TreeNode implements Comparable<TreeNode> {
         int start, end, weight;
-        public 트리노드(int s, int e, int w) {
+        public TreeNode(int s, int e, int w) {
             this.start = s;
             this.end = e;
             this.weight = w;
         }
         @Override
-        public int compareTo(트리노드 o) {
+        public int compareTo(TreeNode o) {
             // TODO Auto-generated method stub
             return Integer.compare(this.weight, o.weight);
         }
