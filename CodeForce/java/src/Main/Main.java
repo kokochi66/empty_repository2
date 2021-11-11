@@ -1,8 +1,4 @@
 package src.Main;
-
-import src.Main.탐색.다익스트라_최단경로;
-import src.Main.트리.프림_최소신장트리;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -21,17 +17,72 @@ public class Main {
     static int h, w, n, m;
     public static void main(String[] args) throws Exception {
         int[][] data1 = {
-                {0,1,1},
-                {0,2,2},
-                {1,2,5},
-                {1,3,1},
-                {2,3,8}
+                {-20, -15},
+                {-14,-5},
+                {-18,-13},
+                {-5,-3}
         };
-        System.out.println(solution(4, data1));
 
+        int[][] data2 = {
+                {0, 2},
+                {2,3},
+                {3,4},
+                {4,6}
+        };
+        System.out.println(solution(data1));
+    }
+    public static int solution(int[][] routes) {
+        int answer = 0;
+//        List<Car> carsLeft = new ArrayList<>();
+        Car[] carsArr =new Car[routes.length];
+        for(int i=0;i<routes.length;i++) {
+//            carsLeft.add(new Car(routes[i][0], routes[i][1]));
+            carsArr[i] = new Car(routes[i][0], routes[i][1]);
+        }
+        Arrays.sort(carsArr, (a,b) -> {
+            return a.left - b.left;
+        });
+//        Collections.sort(carsLeft, (a,b) -> {
+//            return a.left - b.left;
+//        });
+
+        int[] arr = new int[100];
+        int iz = arr.length/2;
+        int leftListIndex = -1;
+        int leftListMin = 1000000;
+        for(int i=0;i<arr.length;i++) {
+//            System.out.println("TEST :: " + i+" "+map.containsKey(i));
+
+            for(int j=leftListIndex + 1;j<carsArr.length;j++) {
+                Car car = carsArr[j];
+                if(car.left + iz <= i) {
+//                    System.out.println("left :: " + (car.left+iz)+" "+(car.right+iz) +" "+i);
+                    if(leftListMin > (car.right + iz)) leftListMin = car.right + iz;
+                    leftListIndex = j;
+                }
+                else break;
+            }
+            if(leftListMin == i) {
+//                System.out.println(i+" "+leftListIndex);
+                answer++;
+                leftListMin = 1000000;
+            }
+        }
+
+        return answer;
     }
 
-    public static int solution(int n, int[][] costs) throws Exception {
+    static class Car {
+        int left;
+        int right;
+        public Car(int left, int right) {
+            this.left = left;
+            this.right = right;
+        }
+    }
+
+
+    public static int solution2(int n, int[][] costs) throws Exception {
         int answer = 0;
         int INF = 1000000000;
 
