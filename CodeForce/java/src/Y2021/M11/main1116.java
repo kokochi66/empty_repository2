@@ -1,4 +1,4 @@
-package src.Main;
+package src.Y2021.M11;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.*;
 
-public class Main {
+public class main1116 {
     static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;
