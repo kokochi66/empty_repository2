@@ -18,9 +18,15 @@ public class Main {
     static int h, w, n, m;
     public static void main(String[] args) throws Exception {
         String[][] data1 = {
-                {"ICN","ABC"},
-                {"ABB","ACC"},
-                {"ABC","ABB"}
+                {"ICN","AOO"},
+                {"AOO","BOO"},
+                {"BOO","COO"},
+                {"COO","DOO"},
+                {"DOO","EOO"},
+                {"EOO","DOO"},
+                {"DOO","COO"},
+                {"COO","BOO"},
+                {"BOO","AOO"},
         };
 
         String[][] data2 = {
@@ -34,7 +40,6 @@ public class Main {
     }
 
     public static String[] solution(String[][] tickets) {
-        String[] answer = {};
 /*        Arrays.sort(tickets, (a, b) -> {
            return a[0].compareTo(b[0]) == 0 ? a[1].compareTo(b[1]) : a[0].compareTo(b[0]);
         });*/
@@ -56,17 +61,17 @@ public class Main {
             map.put(ticList.get(i), i);
             if(ticList.get(i).equals("ICN")) rootIndex = i;
         }
-        for (String s : ticList) {
+/*        for (String s : ticList) {
             System.out.print(s+" "+map.get(s)+" ");
         }
-        System.out.println();
+        System.out.println();*/
 
 
 
         int n = ticList.size();
-        boolean[][] road = new boolean[n][n];
+        int[][] road = new int[n][n];
         for (String[] ticket : tickets) {
-            road[map.get(ticket[0])][map.get(ticket[1])] = true;
+            road[map.get(ticket[0])][map.get(ticket[1])]++;
         }
 
         for(int i=0;i<n;i++) {
@@ -84,7 +89,7 @@ public class Main {
         return resStr;
     }
 
-    public static boolean DFS(boolean[][] edge,int ci, int count, int[] res) {
+    public static boolean DFS(int[][] edge,int ci, int count, int[] res) {
         if(count == res.length) return true;
 /*        System.out.println(ci+" "+count);
         for (boolean[] booleans : edge) {
@@ -93,11 +98,11 @@ public class Main {
         System.out.println("================");*/
         int n = edge.length;
         for(int i=0;i<n;i++) {
-            if(edge[ci][i]) {
-                edge[ci][i] = false;
+            if(edge[ci][i] > 0) {
+                edge[ci][i]--;
                 res[count] = i;
                 if(DFS(edge,i,count+1, res)) return true;
-                edge[ci][i] = true;
+                edge[ci][i]++;
             }
         }
         return false;
