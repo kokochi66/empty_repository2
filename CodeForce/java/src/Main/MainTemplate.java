@@ -1,14 +1,13 @@
 package src.Main;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+
+import java.io.*;
+import java.math.*;
+import java.util.*;
 
 public class MainTemplate {
-    static BufferedReader Read = new BufferedReader(new InputStreamReader(System.in));
-    static BufferedWriter Write = new BufferedWriter(new OutputStreamWriter(System.out));
+    static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;
     static StringBuilder output = new StringBuilder("");
     static int[][] darr, doper;
