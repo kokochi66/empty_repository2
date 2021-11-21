@@ -20,6 +20,10 @@ public class Main {
     }
 
     public static void solution() throws Exception {
+        int TT = Integer.parseInt(rd.readLine());
+        for(int TS=0;TS<TT;TS++) {
+            tok = new StringTokenizer(rd.readLine());
 
+        }
     }
 }
