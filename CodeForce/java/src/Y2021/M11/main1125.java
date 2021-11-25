@@ -204,17 +204,6 @@ public class main1125 {
         }
         System.out.println("16자이상 제거 :: " + st);
 
-        for(int i=0;i<st.length();i++) {
-            if(st.charAt(i) == '.') {
-                if((i+1 < st.length() && st.charAt(i+1) != '.') || i+1 == st.length()) while(!stack.isEmpty()) {
-                    int c = stack.pop();
-                    st.deleteCharAt(c);
-                } else {
-                    stack.add(i);
-                }
-            }
-        }
-
         while(st.length() > 0 && st.charAt(0) == '.') st.deleteCharAt(0);
         while(st.length() > 0 && st.charAt(st.length()-1) == '.') st.deleteCharAt(st.length()-1);
         System.out.println("처음끝. 제거 :: " + st);
