@@ -1,14 +1,9 @@
 package src.Main;
 
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.math.*;
+import java.util.*;
 
 public class Main {
     static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
@@ -21,79 +16,155 @@ public class Main {
     static boolean[] used, check;
     static int h, w, n, m;
     public static void main(String[] args) throws Exception {
-//        System.out.println(Arrays.toString(solution(new String[]{"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"})));
-        System.out.println(Arrays.toString(solution(6, 6, new int[][]{{2,2,5,4},{3,3,6,6},{5,1,6,3}})));
+        solution();
     }
 
-
-    public static int[] solution(int rows, int columns, int[][] queries) {
-        int[][] pan = new int[rows][columns];
-        for(int i=0;i<rows;i++) {
-            for(int j=0;j<columns;j++) {
-                pan[i][j] = (i*columns) + (j+1);
+    public static void solution() throws Exception {
+        int TT = Integer.parseInt(rd.readLine());
+        for(int TS=0;TS<TT;TS++) {
+            int n = Integer.parseInt(rd.readLine());
+            int[][] arr = new int[n][2];
+            for(int i=0;i<n;i++) {
+                tok = new StringTokenizer(rd.readLine());
+                arr[i][0] = Integer.parseInt(tok.nextToken());
+                arr[i][1] = Integer.parseInt(tok.nextToken());
             }
-        }
-//        for(int i=0;i<rows;i++) System.out.println(Arrays.toString(pan[i]));
-        // 선언부
 
-        for(int q=0;q<queries.length;q++) {
-            int x1 = queries[q][0]-1;
-            int y1 = queries[q][1]-1;
-            int x2 = queries[q][2]-1;
-            int y2 = queries[q][3]-1;
-            int min = 1000000000;
+            boolean[] check = new boolean[n];
+            int currPeo = 0;
+            int minLeft = 1000000000;
+            int minleftIdx = -1;
+            //right first
+            for(int i=0;i<n;i++) {
+                if(arr[i][1] >= currPeo) {
+                    currPeo++;
+                    check[i] = true;
+                    if(minLeft > arr[i][0]) {
+                        minLeft = arr[i][0];
+                        minleftIdx = i;
+                    }
+                } else if(arr[i][1] == currPeo-1 ) {
+                    if(minLeft < arr[i][0]) {
+                        check[minleftIdx] = false;
+                        check[i] = true;
 
-            int next = pan[x1+1][y1];
-            int cx = x1;
-            int cy = y1+1;
-            while(!(cx == x1 && cy == y1)) {
-                
-            }
-        }
-        int[] answer = {};
-        return answer;
-    }
-
-    public static String[] solution2(String[] record) {
-        String[] answer = {};
-        ArrayList<String[]> msgList = new ArrayList<>();
-        int n =record.length;
-        HashMap<String, String> map = new HashMap<>();
-        for(int i=0;i<n;i++) {
-            System.out.println("TEST :: " + record[i]);
-            tok = new StringTokenizer(record[i]);
-            String op = tok.nextToken();
-            String id = tok.nextToken();
-
-            String[] cArr = new String[2];
-            cArr[1] = id;
-            if(op.equals("Enter")) {
-                String nick = tok.nextToken();
-                cArr[0] = "E";
-                msgList.add(cArr);
-                if(!map.containsKey(id)) {
-                    map.put(id, nick);
-                } else if(map.containsKey(id)) {
-                    map.replace(id, nick);
+                        minLeft = 1000000000;
+                        minleftIdx = -1;
+                        for(int j=0;j<i;j++) {
+                            if(check[j] && minLeft > arr[j][0]) {
+                                minLeft = arr[j][0];
+                                minleftIdx = j;
+                            }
+                        }
+                    }
                 }
-            } else if(op.equals("Leave")) {
-                cArr[0] = "L";
-                msgList.add(cArr);
-            } else if(op.equals("Change")) {
-                String nick = tok.nextToken();
-                map.replace(id, nick);
             }
-        }
+            System.out.println(Arrays.toString(check));
+            System.out.println(currPeo);
 
-        String[] res = new String[msgList.size()];
-        for(int i=0;i< msgList.size();i++){
-            String[] c = msgList.get(i);
-            if(c[0].equals("E")) {
-                res[i] = map.get(c[1])+"님이 들어왔습니다.";
+            int rotPeo = 0;
+            for(int i=n-1;i>=0;i--) {
+                if(check[i] && arr[i][0] >= rotPeo) {
+                    rotPeo++;
+                }
+            }
+//            System.out.println(rotPeo);
+            wr.write(rotPeo+"");
+            wr.newLine();
+        }
+        wr.flush();
+    }
+
+    public static void solution3() throws Exception {
+        int TT = Integer.parseInt(rd.readLine());
+        for(int TS=0;TS<TT;TS++) {
+            int n = Integer.parseInt(rd.readLine());
+            tok = new StringTokenizer(rd.readLine());
+            int[] arr = new int[n];
+            for(int i=0;i<n;i++) {
+                arr[i] = Integer.parseInt(tok.nextToken());
+            }
+
+            int left = 0, right = n-1;
+            boolean check = true;
+            int errP = -1;
+            // left first
+            while(left < right) {
+                if(arr[left] == errP) {
+                    left++;
+                    continue;
+                }
+                if(arr[right] == errP) {
+                    right--;
+                    continue;
+                }
+
+                if(arr[left] != arr[right]) {
+                    if(errP == -1) errP = arr[right];
+                    else {
+                        check = false;
+                        break;
+                    }
+                    right--;
+                } else {
+                    left++;
+                    right--;
+                }
+            }
+            if(check) {
+                wr.write("YES");
+                wr.newLine();
+                continue;
+            }
+
+            left = 0;
+            right = n-1;
+            errP = -1;
+            check = true;
+            while(left < right) {
+                if(arr[left] == errP) {
+                    left++;
+                    continue;
+                }
+                if(arr[right] == errP) {
+                    right--;
+                    continue;
+                }
+
+                if(arr[left] != arr[right]) {
+                    if(errP == -1) errP = arr[left];
+                    else {
+                        check = false;
+                        break;
+                    }
+                    left++;
+                } else {
+                    left++;
+                    right--;
+                }
+            }
+            if(check) {
+                wr.write("YES");
+                wr.newLine();
             } else {
-                res[i] = map.get(c[1])+"님이 나갔습니다.";
+                wr.write("NO");
+                wr.newLine();
             }
         }
-        return res;
+        wr.flush();
+    }
+
+    public static void solution2() throws Exception {
+        int TT = Integer.parseInt(rd.readLine());
+        for(int TS=0;TS<TT;TS++) {
+            tok = new StringTokenizer(rd.readLine());
+            long n = Integer.parseInt(tok.nextToken());
+            long m = Integer.parseInt(tok.nextToken());
+            if(n == 1 && m == 1) wr.write(0+"");
+            else if(Math.min(n,m) == 1) wr.write(1+"");
+            else wr.write(2+"");
+            wr.newLine();
+        }
+        wr.flush();
     }
 }
