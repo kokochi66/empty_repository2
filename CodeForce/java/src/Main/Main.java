@@ -16,155 +16,87 @@ public class Main {
     static boolean[] used, check;
     static int h, w, n, m;
     public static void main(String[] args) throws Exception {
-        solution();
+//        System.out.println(Arrays.toString(solution(6,6,new int[][]{{2,2,5,4},{3,3,6,6},{5,1,6,3}})));
+
     }
 
-    public static void solution() throws Exception {
-        int TT = Integer.parseInt(rd.readLine());
-        for(int TS=0;TS<TT;TS++) {
-            int n = Integer.parseInt(rd.readLine());
-            int[][] arr = new int[n][2];
-            for(int i=0;i<n;i++) {
-                tok = new StringTokenizer(rd.readLine());
-                arr[i][0] = Integer.parseInt(tok.nextToken());
-                arr[i][1] = Integer.parseInt(tok.nextToken());
-            }
+    public static String[] solution(String[] orders, int[] course) {
+        // 메뉴 리뉴얼 -> 주문시 ㄱ자ㅏㅇ 많이 함께 주문한 단품 메뉴로 코스 메뉴르ㅜㄹ 구성
+        // 최소 2가지 이상으 ㅣ단품메뉴, 최소 2명 이상의 손님으로부터 주문된 단품메뉴 조합에 대해서만 후보로
+        // 단품메뉴는 A~Z 알파벳 대문자 표기
+        // 새로 추가하게 될 코스메뉴 요리의 구성을 문자열 형태로
+        HashMap<Character, ArrayList<String>> map = new HashMap<>();
+        char c = 'A';
+        while(c != 'Z') map.put(c, new ArrayList<>());
+        // 맵 초기화
 
-            boolean[] check = new boolean[n];
-            int currPeo = 0;
-            int minLeft = 1000000000;
-            int minleftIdx = -1;
-            //right first
-            for(int i=0;i<n;i++) {
-                if(arr[i][1] >= currPeo) {
-                    currPeo++;
-                    check[i] = true;
-                    if(minLeft > arr[i][0]) {
-                        minLeft = arr[i][0];
-                        minleftIdx = i;
-                    }
-                } else if(arr[i][1] == currPeo-1 ) {
-                    if(minLeft < arr[i][0]) {
-                        check[minleftIdx] = false;
-                        check[i] = true;
-
-                        minLeft = 1000000000;
-                        minleftIdx = -1;
-                        for(int j=0;j<i;j++) {
-                            if(check[j] && minLeft > arr[j][0]) {
-                                minLeft = arr[j][0];
-                                minleftIdx = j;
-                            }
-                        }
-                    }
-                }
+        for(int i=0;i< orders.length;i++) {
+            char[] arr = orders[i].toCharArray();
+            for(int j=0;j<arr.length;j++) {
+                ArrayList<String> list = map.get(arr[j]);
+                list.add(orders[i]);
             }
-            System.out.println(Arrays.toString(check));
-            System.out.println(currPeo);
-
-            int rotPeo = 0;
-            for(int i=n-1;i>=0;i--) {
-                if(check[i] && arr[i][0] >= rotPeo) {
-                    rotPeo++;
-                }
-            }
-//            System.out.println(rotPeo);
-            wr.write(rotPeo+"");
-            wr.newLine();
         }
-        wr.flush();
+
+        String[] answer = {};
+        return answer;
     }
 
-    public static void solution3() throws Exception {
-        int TT = Integer.parseInt(rd.readLine());
-        for(int TS=0;TS<TT;TS++) {
-            int n = Integer.parseInt(rd.readLine());
-            tok = new StringTokenizer(rd.readLine());
-            int[] arr = new int[n];
-            for(int i=0;i<n;i++) {
-                arr[i] = Integer.parseInt(tok.nextToken());
-            }
+    public static StringBuilder bfs(char[] arr, int n, boolean[] check, StringBuilder c) {
+        if(c.length() >= n) return c;
+        for(int i=0;i<arr.length;i++) {
+            if(!check[i]) {
+                c.append(arr[i]);
+                check[i] = true;
 
-            int left = 0, right = n-1;
-            boolean check = true;
-            int errP = -1;
-            // left first
-            while(left < right) {
-                if(arr[left] == errP) {
-                    left++;
-                    continue;
-                }
-                if(arr[right] == errP) {
-                    right--;
-                    continue;
-                }
-
-                if(arr[left] != arr[right]) {
-                    if(errP == -1) errP = arr[right];
-                    else {
-                        check = false;
-                        break;
-                    }
-                    right--;
-                } else {
-                    left++;
-                    right--;
-                }
-            }
-            if(check) {
-                wr.write("YES");
-                wr.newLine();
-                continue;
-            }
-
-            left = 0;
-            right = n-1;
-            errP = -1;
-            check = true;
-            while(left < right) {
-                if(arr[left] == errP) {
-                    left++;
-                    continue;
-                }
-                if(arr[right] == errP) {
-                    right--;
-                    continue;
-                }
-
-                if(arr[left] != arr[right]) {
-                    if(errP == -1) errP = arr[left];
-                    else {
-                        check = false;
-                        break;
-                    }
-                    left++;
-                } else {
-                    left++;
-                    right--;
-                }
-            }
-            if(check) {
-                wr.write("YES");
-                wr.newLine();
-            } else {
-                wr.write("NO");
-                wr.newLine();
             }
         }
-        wr.flush();
+        return null;
     }
 
-    public static void solution2() throws Exception {
-        int TT = Integer.parseInt(rd.readLine());
-        for(int TS=0;TS<TT;TS++) {
-            tok = new StringTokenizer(rd.readLine());
-            long n = Integer.parseInt(tok.nextToken());
-            long m = Integer.parseInt(tok.nextToken());
-            if(n == 1 && m == 1) wr.write(0+"");
-            else if(Math.min(n,m) == 1) wr.write(1+"");
-            else wr.write(2+"");
-            wr.newLine();
+    public static int[] solution2(int rows, int columns, int[][] queries) {
+        int[][] pan = new int[rows][columns];
+        for(int i=0;i<rows;i++) {
+            for(int j=0;j<columns;j++) {
+                pan[i][j] = (i*columns) + (j+1);
+            }
         }
-        wr.flush();
+//        for(int i=0;i<rows;i++) System.out.println(Arrays.toString(pan[i]));
+        // 선언부
+
+        int[] res = new int[queries.length];
+
+        for(int q=0;q<queries.length;q++) {
+            int x1 = queries[q][0]-1;
+            int y1 = queries[q][1]-1;
+            int x2 = queries[q][2]-1;
+            int y2 = queries[q][3]-1;
+
+            int fin = pan[x1][y1];
+            int min = fin;
+
+            for(int i=x1;i<x2;i++) {
+                pan[i][y1] = pan[i+1][y1];
+                if(pan[i][y1] < min) min = pan[i][y1];
+            }
+            for(int i=y1;i<y2;i++) {
+                pan[x2][i] = pan[x2][i+1];
+                if( pan[x2][i] < min) min = pan[x2][i];
+            }
+            for(int i=x2;i>x1;i--) {
+                pan[i][y2] = pan[i-1][y2];
+                if(pan[i][y2] < min) min = pan[i][y2];
+            }
+            for(int i=y2;i>y1;i--) {
+                pan[x1][i] = pan[x1][i-1];
+                if( pan[x1][i] < min) min = pan[x1][i];
+            }
+            pan[x1][y1+1] = fin;
+
+//            for(int i=0;i<rows;i++) System.out.println(Arrays.toString(pan[i]));
+            res[q] = min;
+        }
+
+        return res;
     }
 }
