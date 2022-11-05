@@ -3,23 +3,23 @@ package src.Main.정렬;
 import java.util.Arrays;
 
 public class 삽입정렬 {
-    public static void main(String[] args){
-        int[] a = {1,10,5,8,7,6,4,3,2,9};
+    public static void main(String[] args) {
+        int[] a = {1, 10, 5, 8, 7, 6, 4, 3, 2, 9};
         InsertionSort(a);
         System.out.println(Arrays.toString(a));
     }
 
-    public static void InsertionSort(int[] arr){
+    public static void InsertionSort(int[] arr) {
         int temp, j;
         // 값을 스와핑할 변수 temp와 스와핑하는 스위치값 j를 초기화한다.
-        for(int i=0;i<arr.length-1;i++){
+        for (int i = 0; i < arr.length - 1; i++) {
             //기본 반복은 어짜피 마지막 직전까지 삽입정렬이 이루어지면 맨 뒤에는 최댓값이 남기때문에 n-1번만 해주면 됨.
             j = i;
             // j값을 현재 위치로 초기화시켜줌.
-            while(arr[j] > arr[j+1]){
+            while (arr[j] > arr[j + 1]) {
                 temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
                 j--;
             }
         }

@@ -17,6 +17,7 @@ public class main1118 {
     static int[] arr, oper;
     static boolean[] used, check;
     static int h, w, n, m;
+
     public static void main(String[] args) throws Exception {
 //        solution(25, new int[]{2,14,11,21,17}, 2); // 4
 //        solution(25, new int[]{6, 11, 14, 17, 21}, 2); // 5
@@ -30,10 +31,10 @@ public class main1118 {
 
     public static int solution(int distance, int[] rocks, int n) {
         Arrays.sort(rocks);
-        int[] rockArr = new int[rocks.length+1];
-        for(int i=0;i< rocks.length;i++) rockArr[i] = rocks[i];
+        int[] rockArr = new int[rocks.length + 1];
+        for (int i = 0; i < rocks.length; i++) rockArr[i] = rocks[i];
         rockArr[rockArr.length - 1] = distance;
-        int res  = binarySearch(0, distance * 2 , rockArr, n);
+        int res = binarySearch(0, distance * 2, rockArr, n);
         System.out.println(res);
         return 0;
     }
@@ -43,20 +44,20 @@ public class main1118 {
 
         int res = checkRock(mid, rocks, n);
 //        System.out.println("MID :: " + mid+" "+left+" "+right+" "+res);
-        if(res == 1 && right - left <= 1) return mid;
+        if (res == 1 && right - left <= 1) return mid;
         return res == 1 ? binarySearch(mid, right, rocks, n) : binarySearch(left, mid, rocks, n);
     }
 
     public static int checkRock(int target, int[] rocks, int n) {
         int curr = 0;
-        for(int i=0;i<rocks.length;i++) {
-            if(rocks[i] - curr < target) {
+        for (int i = 0; i < rocks.length; i++) {
+            if (rocks[i] - curr < target) {
 //                System.out.println("count :: " + curr +" "+rocks[i]+" "+n+" "+target);
                 n--;
             } else {
                 curr = rocks[i];
             }
-            if(n < 0) return -1;
+            if (n < 0) return -1;
         }
         return 1;
     }

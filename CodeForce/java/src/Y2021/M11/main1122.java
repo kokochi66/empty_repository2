@@ -18,13 +18,14 @@ public class main1122 {
     static int[] arr, oper;
     static boolean[] used, check;
     static int h, w, n, m;
+
     public static void main(String[] args) throws Exception {
         solution();
     }
 
     public static void solution() throws Exception {
         int TT = Integer.parseInt(rd.readLine());
-        for(int TS=0;TS<TT;TS++) {
+        for (int TS = 0; TS < TT; TS++) {
             tok = new StringTokenizer(rd.readLine());
             int n = Integer.parseInt(tok.nextToken());
             int a = Integer.parseInt(tok.nextToken());
@@ -37,12 +38,12 @@ public class main1122 {
             int conCnt = 0;
             int ncCnt = 0;
 
-            for(int i=a;i<=n;i++) {
+            for (int i = a; i <= n; i++) {
                 setA.add(i);
             }
-            for(int i=1;i<=b;i++) {
+            for (int i = 1; i <= b; i++) {
                 setB.add(i);
-                if(setA.contains(i)) conCnt++;
+                if (setA.contains(i)) conCnt++;
                 else ncCnt++;
             }
             ncCnt += (setA.size() - conCnt);
@@ -51,33 +52,33 @@ public class main1122 {
             int bMns = setB.contains(a) ? 1 : 0;
 
             boolean pass = false;
-            if(setA.size() - aMns >= (n/2) && (setB.size() - bMns >= (n/2))) {
+            if (setA.size() - aMns >= (n / 2) && (setB.size() - bMns >= (n / 2))) {
 
-                if(conCnt + ncCnt - (n/2) >= (n/2)) {
+                if (conCnt + ncCnt - (n / 2) >= (n / 2)) {
                     pass = true;
                     arr[0] = a;
-                    arr[n/2] = b;
+                    arr[n / 2] = b;
                     setC.add(a);
                     setC.add(b);
                     int curr = n;
-                    if(curr == b) curr--;
-                    for(int i=1;i<n;i++) {
-                        if(i == (n/2)) {
+                    if (curr == b) curr--;
+                    for (int i = 1; i < n; i++) {
+                        if (i == (n / 2)) {
                             curr = 1;
-                            if(setC.contains(curr)) curr++;
+                            if (setC.contains(curr)) curr++;
                             continue;
                         }
                         arr[i] = curr;
 //                        wr.write(arr[i]+" ");
                         setC.add(curr);
 
-                        if(i == (n/2)-1) {
+                        if (i == (n / 2) - 1) {
                             curr = 1;
-                            if(setC.contains(curr)) curr++;
-                        } else if(i > (n/2)-1) {
-                            while(setC.contains(curr)) curr++;
+                            if (setC.contains(curr)) curr++;
+                        } else if (i > (n / 2) - 1) {
+                            while (setC.contains(curr)) curr++;
                         } else {
-                            while(setC.contains(curr)) curr--;
+                            while (setC.contains(curr)) curr--;
                         }
 
                     }
@@ -85,10 +86,10 @@ public class main1122 {
 //                    wr.newLine();
                 }
             }
-            if(!pass) wr.write((-1)+"");
+            if (!pass) wr.write((-1) + "");
             else {
-                for(int i=0;i<n;i++) {
-                    wr.write(arr[i]+" ");
+                for (int i = 0; i < n; i++) {
+                    wr.write(arr[i] + " ");
                 }
             }
 
@@ -118,24 +119,24 @@ public class main1122 {
 
     public static void solution2() throws Exception {
         int TT = Integer.parseInt(rd.readLine());
-        for(int TS=0;TS<TT;TS++) {
+        for (int TS = 0; TS < TT; TS++) {
             tok = new StringTokenizer(rd.readLine());
 
             int n = Integer.parseInt(tok.nextToken());
             int m = Integer.parseInt(tok.nextToken());
-            if((n%2 == 0 && m%2 == 0) || (n%2 == 1 && m%2 == 1)) {
+            if ((n % 2 == 0 && m % 2 == 0) || (n % 2 == 1 && m % 2 == 1)) {
                 int left = 0, right = 0;
-                if(n > m) {
-                    left = (n+m)/2;
+                if (n > m) {
+                    left = (n + m) / 2;
                     right = 0;
 
                 } else {
                     left = 0;
-                    right = (n+m)/2;
+                    right = (n + m) / 2;
                 }
-                wr.write(left+" "+right);
+                wr.write(left + " " + right);
             } else {
-                wr.write((-1)+" "+(-1));
+                wr.write((-1) + " " + (-1));
             }
             wr.newLine();
         }

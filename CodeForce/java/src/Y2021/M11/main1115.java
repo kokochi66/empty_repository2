@@ -18,8 +18,9 @@ public class main1115 {
     static int[] arr, oper;
     static boolean[] used, check;
     static int h, w, n, m;
+
     public static void main(String[] args) throws Exception {
-        System.out.println(solution("hit","cog", new String[]{"hot","dot","dog","lot","log","cog"}));
+        System.out.println(solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"}));
 //        System.out.println(solution("hit","cog", new String[]{"hot","dot","dog","lot","log"}));
     }
 
@@ -29,11 +30,11 @@ public class main1115 {
         int n = words.length;
 //        System.out.println("TEST :: " + n);
         int[] beginComp = new int[n];
-        for(int i=0;i<n;i++) beginComp[i] = compChar(begin, words[i]);
+        for (int i = 0; i < n; i++) beginComp[i] = compChar(begin, words[i]);
 
         int[][] compArr = new int[n][n];
-        for(int i=0;i<n;i++) {
-            for(int j=0;j<n;j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 compArr[i][j] = compChar(words[i], words[j]);
             }
         }
@@ -41,29 +42,29 @@ public class main1115 {
 
         Queue<Integer[]> q = new LinkedList<>();
         boolean[] check = new boolean[n];
-        for(int i=0;i<n;i++) {
-            if(beginComp[i] == 1) q.add(new Integer[]{i,1});
+        for (int i = 0; i < n; i++) {
+            if (beginComp[i] == 1) q.add(new Integer[]{i, 1});
         }
-        while(!q.isEmpty() && !words[q.peek()[0]].equals(target)) {
+        while (!q.isEmpty() && !words[q.peek()[0]].equals(target)) {
             Integer[] c = q.poll();
 //            System.out.println("C :: " + Arrays.toString(c)+" "+Arrays.toString(check));
-            for(int i=0;i<n;i++) {
-                if(compArr[c[0]][i] == 1 && !check[i]) {
+            for (int i = 0; i < n; i++) {
+                if (compArr[c[0]][i] == 1 && !check[i]) {
                     check[i] = true;
-                    q.add(new Integer[]{i, c[1]+1});
+                    q.add(new Integer[]{i, c[1] + 1});
                 }
             }
         }
-        if(q.isEmpty()) return 0;
+        if (q.isEmpty()) return 0;
 
         return q.peek()[1];
     }
 
     public static int compChar(String a, String b) {
         int ans = 0;
-        int i=0;
-        while(i < a.length()) {
-            if(a.charAt(i) != b.charAt(i)) ans++;
+        int i = 0;
+        while (i < a.length()) {
+            if (a.charAt(i) != b.charAt(i)) ans++;
             i++;
         }
         return ans;

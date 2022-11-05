@@ -10,6 +10,7 @@ public class main1108 {
     static BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer tok;
+
     public static void main(String[] args) throws Exception {
         solution();
     }
@@ -18,7 +19,7 @@ public class main1108 {
         // https://www.acmicpc.net/problem/1033 백준 칵테일
         int n = Integer.parseInt(rd.readLine());
         calRatio[] arr = new calRatio[n];
-        for(int i=0;i<n-1;i++) {
+        for (int i = 0; i < n - 1; i++) {
             tok = new StringTokenizer(rd.readLine());
             int a = Integer.parseInt(tok.nextToken());
             int b = Integer.parseInt(tok.nextToken());
@@ -32,14 +33,14 @@ public class main1108 {
             bRatio.setRoot(bPer);
             bRatio.setCal(aRatio);
 
-            if(arr[a] == null) arr[a] = aRatio;
+            if (arr[a] == null) arr[a] = aRatio;
             else {
                 long lcm = lcm(arr[a].root, aRatio.root);
                 aRatio.cycle = true;
                 calRatio cRatio = aRatio.cal;
-                while(!cRatio.cycle) {
-                    cRatio.setRoot(cRatio.root  * (lcm / aRatio.root));
-                    if(cRatio.cal.cycle) {
+                while (!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root * (lcm / aRatio.root));
+                    if (cRatio.cal.cycle) {
                         cRatio.cal = arr[a];
                         break;
                     }
@@ -51,9 +52,9 @@ public class main1108 {
 
                 arr[a].cycle = true;
                 cRatio = arr[a].cal;
-                while(!cRatio.cycle) {
-                    cRatio.setRoot(cRatio.root  * (lcm / arr[a].root));
-                    if(cRatio.cal.cycle) {
+                while (!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root * (lcm / arr[a].root));
+                    if (cRatio.cal.cycle) {
                         cRatio.cal = aRatio.cal;
                         break;
                     }
@@ -64,14 +65,14 @@ public class main1108 {
             }
 //            wr.write("A :: " + Arrays.toString(arr));
 //            wr.newLine();
-            if(arr[b] == null) arr[b] = bRatio;
+            if (arr[b] == null) arr[b] = bRatio;
             else {
                 long lcm = lcm(arr[b].root, bRatio.root);
                 bRatio.cycle = true;
                 calRatio cRatio = bRatio.cal;
-                while(!cRatio.cycle) {
-                    cRatio.setRoot(cRatio.root  * (lcm / bRatio.root));
-                    if(cRatio.cal.cycle) {
+                while (!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root * (lcm / bRatio.root));
+                    if (cRatio.cal.cycle) {
                         cRatio.cal = arr[b];
                         break;
                     }
@@ -82,9 +83,9 @@ public class main1108 {
 
                 arr[b].cycle = true;
                 cRatio = arr[b].cal;
-                while(!cRatio.cycle) {
-                    cRatio.setRoot(cRatio.root  * (lcm / arr[b].root));
-                    if(cRatio.cal.cycle) {
+                while (!cRatio.cycle) {
+                    cRatio.setRoot(cRatio.root * (lcm / arr[b].root));
+                    if (cRatio.cal.cycle) {
                         cRatio.cal = bRatio.cal;
                         break;
                     }
@@ -99,11 +100,11 @@ public class main1108 {
         }
 
         long gcd = gcdN(arr);
-        for(int i=0;i<arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i].root /= gcd;
         }
         for (calRatio c : arr) {
-            wr.write(c.root+" ");
+            wr.write(c.root + " ");
         }
         wr.newLine();
         wr.flush();
@@ -113,11 +114,14 @@ public class main1108 {
         long root;
         calRatio cal;
         boolean cycle;
-        calRatio() {}
+
+        calRatio() {
+        }
 
         public void setRoot(long root) {
             this.root = root;
         }
+
         public void setCal(calRatio cal) {
             this.cal = cal;
         }
@@ -128,14 +132,14 @@ public class main1108 {
 
         @Override
         public String toString() {
-            return this.root+"";
+            return this.root + "";
         }
     }
 
     // 최대 공약수
     public static long gcd(long a, long b) {
-        while(b!= 0) {
-            long r = a%b;
+        while (b != 0) {
+            long r = a % b;
             a = b;
             b = r;
         }
@@ -144,15 +148,15 @@ public class main1108 {
 
     // 최소 공배수
     public static long lcm(long a, long b) {
-        return (a * b) / gcd(a,b);
+        return (a * b) / gcd(a, b);
     }
 
     // n개의 최대공약수 = 유클리드 호제법
     public static long gcdN(calRatio[] arr) {
         long result = arr[0].root;
-        for(int i=1;i<arr.length;i++) {
+        for (int i = 1; i < arr.length; i++) {
             result = gcd(arr[i].root, result);
-            if(result == 1) return 1;
+            if (result == 1) return 1;
         }
         return result;
     }
