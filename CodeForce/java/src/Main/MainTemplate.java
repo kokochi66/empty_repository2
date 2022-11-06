@@ -13,16 +13,7 @@ public class MainTemplate {
     static StringTokenizer tok;
 
     public static void main(String[] args) throws Exception {
-//        solution();
-        List<String> list = new ArrayList<>();
-        list.add("a");
-        list.add(5, "b");
-        list.set(1,"abcde");
-        for (String s : list) {
-            System.out.println(s);
-        }
-
-        // a b c d e f g h j
+        solution();
     }
 
     public static void solution() throws Exception {
