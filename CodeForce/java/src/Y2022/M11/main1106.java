@@ -12,7 +12,17 @@ public class main1106 {
     static StringTokenizer tok;
 
     public static void main(String[] args) throws Exception {
-        solution();
+//        solution();
+
+        int[] a = {1, 3, 9, 22 , 23};
+        int b = -5;
+        int[] arr = new int[a.length + 1];
+        for(int i=0;i<a.length;i++) {
+            arr[i] = a[i];
+        }
+        arr[arr.length - 1] = b;
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void solution() throws Exception {
@@ -51,16 +61,6 @@ public class main1106 {
 //            System.out.println(sw);
 //            System.out.println("left = " +left);
 //            System.out.println("right = " +right);
-            // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 ... + right - left
-            // 34 40
-            // 34,35 34,36 34,37 34,38 34,39, 34,40
-            // n(n+1)/2
-            // 왼쪽 = left ~ n
-            // 오른쪽 = n ~ right
-            // left ~ n 까지 돌면서
-            // 34 35 36 37 38
-            // (right - n + 1) * ( n - left )
-
             int a = right - n + 1;
             int b = n - left;
             int c = right - n;
