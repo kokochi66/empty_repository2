@@ -20,14 +20,8 @@ public class main1107 {
         int n = Integer.parseInt(rd.readLine());
         int[] arr = new int[n];
 
-        int minCount = 0;
-        int plsCount = 0;
-        int zero = 0;
         for (int TS = 0; TS < n; TS++) {
             arr[TS] = Integer.parseInt(rd.readLine());
-            if(arr[TS] < 0) minCount++;
-            else if(arr[TS] > 0) plsCount++;
-            else zero++;
         }
         Arrays.sort(arr);
 
@@ -37,7 +31,7 @@ public class main1107 {
 //         4. 양수는 양수끼리 큰 값부터 곱한다.
 //         5. 1은 곱하지 않는다.
 
-        // 0 1 2 3 4 5
+        // 0 2 2 3 4 5
 
         int sum = 0;
         for(int i=0;i<n;i++) {
@@ -62,7 +56,6 @@ public class main1107 {
             } else {
                 sum += arr[i];
             }
-
         }
         System.out.println(sum);
 
