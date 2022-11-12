@@ -18,14 +18,19 @@ public class main1111 {
 
     public static void solution() throws Exception {
         long k = Long.parseLong(rd.readLine());
-
-        // 0
-        // 01
-        // 0110
-        // 01101001
-        // 0110100101101001
-
+        int res = dc(k, 0);
+        System.out.println(res);
 
     }
 
+    public static int dc(long k, int count) {
+//        System.out.println(k +" " + count);
+        if(k == 1L) return count % 2 == 0 ? 0 : 1;
+        long n = 2;
+        while(n < k) n *= 2;
+        long mid = (n / 2);
+        return dc(k - mid, count + 1);
+    }
+
+    // 0 1 10 1001 10010110 1001011001101001
 }
